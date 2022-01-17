@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <ul class="nav navbar-nav mr-auto">
+    <li
+      class="nav-item"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a class="nav-link" routerLink="">Instructions</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="todo"
+        >TODOs
+        <span
+          class="badge {{
+            doneTodoCount == 0
+              ? 'badge-danger'
+              : doneTodoCount == todoCount
+              ? 'badge-success'
+              : 'badge-primary'
+          }}"
+          >{{ doneTodoCount }}/{{ todoCount }}</span
+        ></a
+      >
+    </li>
+  </ul>
+  <ng-container *ngIf="!isAuthenticated">
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-2"
+        type="text"
+        placeholder="username"
+        #username
+        ngModel
+        required
+        name="username"
+      />
+      <button
+        class="btn btn-primary my-2 my-sm-0"
+        (click)="onLogin(username.value)"
+      >
+        Login
+      </button>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="isAuthenticated">
+    <fa-icon [icon]="['far', 'user-circle']" class="mr-1 text-light"></fa-icon>
+    <span class="mr-2 text-white">{{ authService.authState$ | async }}</span>
+    <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">
+      Logout
+    </button>
+  </ng-container>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

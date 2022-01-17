@@ -1,0 +1,6 @@
+<ng-container *ngIf="component.data$ | async as data">
+  <cx-media [container]="data.media"></cx-media>
+  <cx-generic-link [url]="data.urlLink" class="custom-banner__link">
+    <strong>{{ data.name }}</strong>
+  </cx-generic-link>
+</ng-container>

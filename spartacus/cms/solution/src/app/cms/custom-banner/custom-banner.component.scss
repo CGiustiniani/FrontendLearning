@@ -1,0 +1,11 @@
+:host {
+  position: relative;
+}
+
+.custom-banner__link {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  background: rgba(lightblue, .6);
+  padding: .25em;
+}

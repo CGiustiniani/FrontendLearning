@@ -1,0 +1,37 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li><span>Create a new module named Orders with a component Orders</span>
+			</li>
+			<br/>
+			<li><span>Define routing for that module and its component by defining OrdersRoutingModule in a new file orders-routing.module.ts. See other components for an example.</span>
+			</li>
+			<br/>
+			<li><span>All there is left to do inside a module is to include OrdersRoutingModule in orders module.</span>
+			</li>
+			<br/>
+			<li><span>Open app routing file and find variable routes that instantiates Routes. Using home and customers components as example, inside the instantiation add newly defined orders routing using loadChildren that activates lazy loading for specified route.</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Lazy Loading</h5>
+	<div class="card-body">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xs-12">
+					<app-nav-bar></app-nav-bar>
+				</div>
+			</div>
+			<div class="row justify-content-center margin-top-down">
+				<div class="col-xs-12">
+					<router-outlet></router-outlet>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

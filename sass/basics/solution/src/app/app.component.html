@@ -1,0 +1,43 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Instructions</h5>
+  <div class="card-body">
+    <ul>
+      <li>
+        Create a <strong>.scss</strong> stylesheet for the app component and
+        import it into the component via the decorator
+      </li>
+      <li>
+        Inside the stylesheet, declare two variables - $primary and $secondary -
+        and assign them colors of your choice
+      </li>
+      <li>
+        Declare a variable named $base-size and assign a value of 18px to it.
+      </li>
+      <li>
+        Create a new selector for the content section and give it left/right
+        padding of 1 em and set the font size to $base-size.
+      </li>
+      <li>
+        Nest the selector for the heading inside it, give it a color of $primary
+        color, a font size 2.5 times greater than the base size, a bottom border
+        colored $secondary (other settings are arbitrary) and a bottom margin
+        half the size of the $base-size
+      </li>
+      <li>
+        Appropriately nest the list selector for the list and reset the style
+      </li>
+      <li>
+        Implement the hover state of each list element - the element should
+        change the color to $secondary
+      </li>
+    </ul>
+  </div>
+</div>
+<hr />
+<section class="content">
+  <h2 class="content-heading">What we will learn:</h2>
+  <ul class="content-list">
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</section>

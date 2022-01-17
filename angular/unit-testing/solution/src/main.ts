@@ -1,0 +1,49 @@
+import './testing/global-jasmine';
+import 'jasmine-core/lib/jasmine-core/jasmine-html.js';
+import 'jasmine-core/lib/jasmine-core/boot.js';
+
+declare var jasmine;
+
+import './polyfills';
+
+import 'zone.js/dist/zone-testing';
+
+import { getTestBed } from '@angular/core/testing';
+import {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting
+} from '@angular/platform-browser-dynamic/testing';
+
+// Import spec files individually for Stackblitz
+import './app/service/heroes.service.spec.ts';
+import './app/pipe/capitalise.pipe.spec.ts';
+import './app/component/counter.component.spec.ts';
+import './app/directive/click.directive.spec.ts';
+import './testing/http-client.spec.ts';
+
+//
+bootstrap();
+
+//
+function bootstrap () {
+  if (window['jasmineRef']) {
+    location.reload();
+    return;
+  } else {
+    window.onload(undefined);
+    window['jasmineRef'] = jasmine.getEnv();
+  }
+
+  // First, initialize the Angular testing environment.
+  getTestBed().initTestEnvironment(
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting()
+  );
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

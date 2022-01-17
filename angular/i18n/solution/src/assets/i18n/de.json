@@ -1,0 +1,32 @@
+{
+    "instructions": {
+      "headline": "Anweisungen",
+      "instruction01": "Anweisung 1",
+      "instruction02": "Anweisung 2",
+      "instruction03": "Anweisung 3",
+      "instruction04": "Anweisung 4",
+      "instruction05": "Anweisung 5",
+      "instruction06": "Anweisung 6",
+      "instruction07": "Anweisung 7",
+      "instruction08": "Anweisung 8",
+      "instruction09": "Anweisung 9",
+      "instruction10": "Anweisung 10",
+      "instruction11": "Anweisung 11",
+      "instruction12": "Anweisung 12",
+      "instruction13": "Anweisung 13",
+      "instruction14": "Anweisung 14",
+      "instruction15": "Anweisung 15",
+      "instruction16": "Anweisung 16",
+      "subInstruction16": "Anweisung 16a",
+      "instruction17": "Anweisung 17"
+    },
+    "language": {
+      "headline": "Sprachauswahl",
+      "langEN": "Englisch",
+      "langDE": "Deutsch",
+      "langHR": "Kroatisch"
+    },
+    "button": {
+      "label": "Aktualisieren"
+    }
+  }

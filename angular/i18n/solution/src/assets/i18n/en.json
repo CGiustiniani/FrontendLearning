@@ -1,0 +1,32 @@
+{
+    "instructions": {
+      "headline": "Instructions",
+      "instruction01": "Add the necessary dependencies in package.json (already provided in comments)",
+      "instruction02": "Add an 'assets' folder on root level (same as app or index.html)",
+      "instruction03": "Add a folder called 'i18n' inside the assets folder",
+      "instruction04": "Add empty translation files to the i18n directory, e.g. en.json, de.json and hr.json",
+      "instruction05": "Open app.module.ts",
+      "instruction06": "Import the json files",
+      "instruction07": "Define a StackBlitz specific CustomLoader to load translations from the files",
+      "instruction08": "Add a function createTranslateLoader to export the custom loader",
+      "instruction09": "Add the TranslateModule to the @NgModule imports",
+      "instruction10": "Add the configuration under forRoot",
+      "instruction11": "Change the default language if you want to",
+      "instruction12": "Switch to the app.component.ts file",
+      "instruction13": " Add the TranslationService (@ngx-translate/core) via constructor injection",
+      "instruction14": "Edit the onUpdate function. The TranslationService function 'use' sets the language via 2 letter code.",
+      "instruction15": "Switch to the app.component.html file",
+      "instruction16": " Replace hard coded strings by translations (instructions headline, langauge selection, language names and maybe even instructions)",
+      "subInstruction16": "The most common ways are either using 'translate' (without quotes) as attribute in the tag. In this case all the text inside the tag is considered a translation key. Alternatively, you can always use a pipe like ",
+      "instruction17": "Use the strings of the HTML as JSON keys in the language files and add the translations, e.g.:"
+    },
+    "language": {
+      "headline": "Language Selection",
+      "langEN": "English",
+      "langDE": "German",
+      "langHR": "Croatian"
+    },
+    "button": {
+      "label": "Update"
+    }
+  }

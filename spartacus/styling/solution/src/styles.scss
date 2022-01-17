@@ -1,0 +1,55 @@
+/* Add application styles & imports to this file! */
+
+$skipComponentStyles: (cx-mini-cart);
+
+@import "~@spartacus/styles/index";
+
+// Exercise 1. Opt-out the MiniCart styling and add your own styling for it.
+%custom-mini-cart {
+  margin-left: 1rem;
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    margin-right: 1rem;
+  }
+
+  a {
+    padding: .5em;
+    border: 1px dashed;
+    border-color: var(--cx-color-primary);
+    transition: all 0.3s cubic-bezier(0, 1, 0.5, 1);
+
+    &:hover {
+      text-decoration: none;
+      color: var(--cx-color-inverse);
+      border-color: var(--cx-color-inverse);
+    }
+  }
+}
+
+cx-mini-cart {
+  @extend %custom-mini-cart;
+}
+
+
+// Exercise 2. Let's get rid of border radius in the entire app.
+:root {
+  --cx-border-radius: 0;
+  --cx-buttons-border-radius: 0;
+}
+
+
+// Exercise 3. Our banners (e.g. on homepage) can be clickable. This is by default not visible at all, so let's add some hover effect on them, to indicate they are clickable.
+%custom-banner {
+  img {
+    opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0, 1, 0.5, 1);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+cx-banner {
+  @extend %custom-banner !optional;
+}

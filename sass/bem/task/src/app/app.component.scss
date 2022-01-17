@@ -1,0 +1,44 @@
+.c-teaser {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 3em;
+}
+
+.teaser-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translate(-5px, -5px);
+      box-shadow: 10px 10px 25px rgba(#444, 0.25);
+    }
+  }
+
+  li:nth-child(odd) {
+    background-color: #ebecf0;
+  }
+
+  li:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+
+.teaser-content {
+  padding: 1.5em 1em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}

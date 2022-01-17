@@ -1,0 +1,150 @@
+<div class="m-3 alert alert-warning alert-dismissible fade show" role="alert">
+  <p>
+    The recommended way for a real project is not working on StackBlitz. It is
+    recommended to follow the readme guide on
+    <a href="https://github.com/TBernwinkler/solved-ecx-angular-i18n-multi-language">GitHub</a>. Of course, you can also
+    stay here on StackBlitz and follow the
+    instructions to learn the ropes. Please be aware that the
+    instructions below use a special translation loader due to StackBlitz
+    restrictions. This should NOT be used in your projects.
+  </p>
+</div>
+
+<!-- main app container -->
+<div class="card m-3">
+  <!-- headline to translate, e.g. instructions.headline as the key -->
+  <h5 class="card-header">Instructions</h5>
+  <div class="card-body">
+    <ol>
+      <!-- Move the instructions to the i18n JSON files and add the translation keys here -->
+      <li>
+        <h6>
+          Add the necessary dependencies in package.json (already provided in
+          comments)
+        </h6>
+      </li>
+      <li>
+        <h6>
+          Add an 'assets' folder on root level (same as app or index.html)
+        </h6>
+      </li>
+      <li>
+        <h6>Add a folder called 'i18n' inside the assets folder</h6>
+      </li>
+      <li>
+        <h6>
+          Add empty translation files to the i18n directory, e.g. en.json,
+          de.json and hr.json
+        </h6>
+      </li>
+      <li>
+        <h6>Open app.module.ts</h6>
+      </li>
+      <li>
+        <h6>Import the json files</h6>
+      </li>
+      <li>
+        <h6>
+          Define a StackBlitz specific CustomLoader to load translations from
+          the files
+        </h6>
+        <pre><code>{{"class CustomLoader implements TranslateLoader {
+  getTranslation(lang: string): Observable&lt;any&gt; {
+    //if langXY ... return of(importedJson)
+  }
+}"}}</code></pre>
+      </li>
+      <li>
+        <h6>
+          Add a function createTranslateLoader to export the custom loader
+        </h6>
+      </li>
+      <li>
+        <h6>Add the TranslateModule to the @NgModule imports</h6>
+      </li>
+      <li>
+        <h6>Add the configuration under forRoot</h6>
+      </li>
+      <pre><code>{{"{
+  defaultLanguage: &#39;en&#39;,
+  loader: {
+    provide: TranslateLoader,
+    useFactory: createTranslateLoader,
+    deps: []
+  }
+}"}}</code></pre>
+      <li>
+        <h6>Change the default language if you want to</h6>
+      </li>
+      <li>
+        <h6>Switch to the app.component.ts file</h6>
+      </li>
+      <li>
+        <h6>
+          Add the TranslationService (@ngx-translate/core) via constructor
+          injection
+        </h6>
+      </li>
+      <li>
+        <h6>
+          Edit the onUpdate function. The TranslationService function "use" sets
+          the language via 2 letter code.
+        </h6>
+      </li>
+      <li>
+        <h6>Switch to the app.component.html file</h6>
+      </li>
+      <li>
+        <h6>
+          Replace hard coded strings by translations (instructions headline,
+          langauge selection, language names and maybe even instructions)
+        </h6>
+        <p>
+          The most common ways are either using "translate" (without quotes) as
+          attribute in the tag. In this case all the text inside the tag is
+          considered a translation key. Alternatively, you can always use a pipe
+          like <code ngNonBindable>{{'translationKey' | translate}}</code>
+        </p>
+      </li>
+      <li>
+        <h6>
+          Use the strings of the HTML as JSON keys in the language files and add
+          the translations, e.g.:
+        </h6>
+        <pre><code>{{'{
+  "instructions": {
+    "headline": "Instructions",
+    "instruction01": "instruction text 1",
+    "instruction02": "instruction text 2",
+    "instruction03": "instruction text 3",
+    ...
+  },
+  "language": {
+    "headline": "Language Selection",
+    "langEN": "English",
+    "langDE": "German",
+    "langHR": "Croatian"
+  },
+  "button": {
+    "label": "Update"
+  }
+}'}}</code></pre>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="card m-3">
+  <!-- Another headline to translate; e.g. language.headline -->
+  <h5 class="card-header">Language Selection</h5>
+  <div class="card-body flex-wrapper">
+    <select [(ngModel)]="selectedLanguage" class="form-control language-select">
+      <option value="EN">English</option>
+      <option value="DE">Deutsch</option>
+      <option value="HR">Hrvatski</option>
+    </select>
+    <div class="text-center">
+      <button (click)="onUpdate()" class="btn btn-primary mr-1">Update</button>
+    </div>
+  </div>
+</div>

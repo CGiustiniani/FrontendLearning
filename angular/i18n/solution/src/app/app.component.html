@@ -1,0 +1,101 @@
+<div class="m-3 alert alert-warning alert-dismissible fade show" role="alert">
+	<p>Please be aware that Stackblitz does not fully support loading resources like JSON formatted i18n files. For
+		this reason, I provided code to a few demos on <a target="_blank"
+			href="https://github.com/TBernwinkler/solved-ecx-angular-i18n-multi-language">GitHub</a>.</p>
+
+	<p>There are also other StackBlitz translation examples <a
+			href="https://stackblitz.com/edit/angular-i18n-demo-app">out there</a>. However, proper i18n translations
+		can't be found on StackBlitz, as loading JSON files (instead of importing them) does not work as mentioned
+		above.</p>
+</div>
+
+<!-- main app container -->
+<div class="card m-3">
+	<!-- headline to translate, e.g. instructions.headline as the key -->
+	<h5 class="card-header" translate>instructions.headline</h5>
+	<div class="card-body">
+
+		<ul>
+			<!-- Move the instructions to the i18n JSON files and add the translation keys here -->
+			<li>
+				<h6 translate>instructions.instruction01</h6>
+			</li>
+			<li>
+				<h6 translate>instructions.instruction02</h6>
+			</li>
+			<li>
+				<h6 translate>instructions.instruction03</h6>
+      </li>
+      <li><h6 translate>instructions.instruction04</h6></li>
+      <li><h6 translate>instructions.instruction05</h6></li>
+      <li><h6 translate>instructions.instruction06</h6></li>
+      <li>
+        <h6 translate>instructions.instruction07</h6>
+        <pre><code>{{"class CustomLoader implements TranslateLoader {
+  getTranslation(lang: string): Observable&lt;any&gt; {
+    //if langXY ... return of(importedJson)
+  }
+}"}}</code></pre>
+      </li>
+      
+      <li><h6 translate>instructions.instruction08</h6></li>
+      <li><h6 translate>instructions.instruction09</h6></li>
+      <li>
+        <h6 translate>instructions.instruction10</h6>
+         <pre><code>{{"{
+  defaultLanguage: &#39;en&#39;,
+  loader: {
+    provide: TranslateLoader,
+    useFactory: createTranslateLoader,
+    deps: []
+  }
+}"}}</code></pre>
+      </li>
+      <li><h6 translate>instructions.instruction11</h6></li>
+      <li><h6 translate>instructions.instruction12</h6></li>
+      <li><h6 translate>instructions.instruction13</h6></li>
+      <li><h6 translate>instructions.instruction14</h6></li>
+      <li><h6 translate>instructions.instruction15</h6></li>
+      <li>
+        <h6 translate>instructions.instruction16</h6>
+        <p>{{'instructions.subInstruction16' | translate}} <code ngNonBindable>{{'translationKey' | translate}}</code></p>
+      </li>
+      <li>
+        <h6 translate>instructions.instruction17</h6>
+        <pre><code>{{'{
+  "instructions": {
+    "headline": "Instructions",
+    "instruction01": "instruction text 1",
+    "instruction02": "instruction text 2",
+    "instruction03": "instruction text 3",
+    ...
+  },
+  "language": {
+    "headline": "Language Selection",
+    "langEN": "English",
+    "langDE": "German",
+    "langHR": "Croatian"
+  },
+  "button": {
+    "label": "Update"
+  }
+}'}}</code></pre>
+      </li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<!-- Another headline to translate; e.g. language.headline -->
+	<h5 class="card-header">{{'language.headline' | translate}}</h5>
+	<div class="card-body flex-wrapper">
+		<select [(ngModel)]='selectedLanguage' class="form-control language-select" >
+      <option value="en" translate>language.langEN</option>
+      <option value="de" translate>language.langDE</option>
+      <option value="hr" translate>language.langHR</option>
+    </select>
+		<div class="text-center">
+			<button (click)="onUpdate()" class="btn btn-primary mr-1" translate>button.label</button>
+		</div>
+	</div>
+</div>

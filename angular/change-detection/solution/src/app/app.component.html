@@ -1,0 +1,30 @@
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<p>This is a little question - answer application. If the info about the current temperature has been asked, the
+			appropriate answer will be given.</p>
+		<ul>
+			<li><span>In the child component set OnPush policy into the @Component decorator and inject ChangeDetectorRef as the constructor argument.
+      </span>
+			</li>
+			<br/>
+			<li><span>The input question is saved with first button click and logged in the console. We want to show it on the screen. Now, as we've read in the tutorial, event handler implicitly calls for change detection. Test this by implementing empty function called by clicking <i>Show question</i>.
+      </span>
+			</li>
+			<br/>
+			<li><span>At this point, we can see the text on the screen, as well as the button <i>Request answer</i>. We want to get temperature from sensor every <i>N</i> seconds. Make this value shows whenever its changed.
+      <p>HINT: averageTemperature is changed inside an <i>Observable</i></p>
+      </span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Change Detection Strategy</h5>
+	<div class="card-body">
+		<input #questionInput type="text" value="I really, really, really want to know average room temperature!"><br/><br/>
+		<Button class="btn btn-info" (click)="createQuestion(questionInput)">Save the question</Button>
+		<app-child [textToShow]="textToShow"></app-child>
+	</div>
+</div>

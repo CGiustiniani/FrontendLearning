@@ -1,0 +1,22 @@
+<br/><br/>
+<div>
+	<Button class="btn btn-danger">Show question</Button>
+</div>
+<br/>
+<div>
+	<span *ngFor="let part of textToShow">{{part}}</span>
+</div>
+<br/>
+<div *ngIf="textToShow.length > 0">
+	<Button class="btn btn-success" (click)="requestAnswer()">Request answer</Button>
+</div>
+<br/>
+<div *ngIf="isQuestionAsked">
+	<div>
+		<hr>
+		<span>No problem, there you go! :)</span>
+	</div>
+	<div>
+		<span>AVERAGE TEMPERATURE: <b [ngClass]="{'blue': averageTemperature < 10, 'green': averageTemperature > 10 && averageTemperature < 25, 'red': averageTemperature > 25}">{{ averageTemperature }}</b></span>
+	</div>
+</div>

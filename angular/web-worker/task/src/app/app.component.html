@@ -1,0 +1,27 @@
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<p>This mini application is solely for demonstration purposes, an example which demonstrates how web workers can make multiple concurrent tasks run
+			in parallel without bogging down.</p>
+    <p>In one pane the UI of the application is represented by a grid with circles, which is constatly updated with the circles being drawn and reacts to mouse clicks. The second pane will host a long running process, which normally will block the UI thread and prevent the UI from doing its job.</p>
+		<ul>
+			<br/>
+			<li><span>Improve responsiveness by moving heavy calculation logic into a web worker <i>calculation</i> script. 
+      <p>HINT: The webworker.service is already pre-prepared to execute the above script logic.</p>
+      </span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Web Worker</h5>
+	<div class="card-body">
+		<div id="first">
+			<div class="innerContainer"><button (click)="longLoop()">Start Long Process</button></div>
+			<div class="innerContainer"><textarea rows="10" [ngModel]="longProcessOutput"></textarea></div>
+			<app-circle></app-circle>
+
+		</div>
+	</div>
+</div>

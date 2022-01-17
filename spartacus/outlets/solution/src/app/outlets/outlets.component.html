@@ -1,0 +1,34 @@
+<!-- 
+  Exercise 1: Replace SAP logo with ecx.io logo
+-->
+<ng-template cxOutletRef="SiteLogo">
+  <a [routerLink]="'/'">
+    <img
+      src="https://www.ecx.io/wp-content/themes/ecx/images/ecxio_logo_white.svg"
+    />
+  </a>
+</ng-template>
+
+
+
+<!-- 
+  Exercise 2: Add information whether the product is available for pickup on Product Detail Page 
+              - Note: there is product$ async attribute available in the component
+-->
+<ng-template cxOutletRef="ProductDetailsPageTemplate" cxOutletPos="before">
+  <ng-container *ngIf="product$ | async as product">
+    
+    <div *ngIf="product.availableForPickup; else notAvailable" class="global-alerts">
+      <div class="alert alert-info" role="alert">
+        <strong>Attention!</strong> This product is available for pickup!
+      </div>
+    </div>
+
+    <ng-template #notAvailable>
+      <div class="alert alert-warning" role="alert">
+        <strong>Attention!</strong> This product is <strong>not</strong> available for pickup!
+      </div>
+    </ng-template>
+
+  </ng-container>
+</ng-template>

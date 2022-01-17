@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Tricks</title>
+  <!-- bootstrap css -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="print.css" rel="stylesheet" />
+</head>
+
+<body>
+  <br/>
+  <h3 class="text-center">CSS Tipps & Tricks</h3>
+  <div class="card m-3">
+    <h5 class="card-header">1. Reduce render bocking CSS</h5>
+    <div class="card-body">
+      <p>
+        Add media="print" to the link tag to load it only in print view
+        (&lt;link href="print.css" rel="stylesheet" media="print" /&gt;)
+      </p>
+    </div>
+  </div>
+  <div class="card m-3">
+    <h5 class="card-header">2. &lt;link&gt; Preload</h5>
+    <div class="card-body">
+      <p>
+        Add a preload tag for the file font.woff2 file next to the &lt;title&gt; tag in the &lt;head&gt; (&lt;link
+        href="font.woff2" as="font" type="font/woff2" crossorigin /&gt;)
+      </p>
+    </div>
+  </div>
+  <div class="card m-3">
+    <h5 class="card-header">3. CSS property: content-visibility</h5>
+    <div class="card-body">
+      <p>
+        Add following properties to the .card class in the style.css file:
+      <ul>
+        <li>content-visibility: auto;</li>
+        <li>contain-intrinsic-size: 1000px;</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+  <div class="card m-3">
+    <h5 class="card-header">4. Media query: prefers-reduced-data</h5>
+    <div class="card-body">
+      <p>Add following style to the style.css file to remove the custom font for reduced-data devices</p>
+      <p>
+        @media (prefers-reduced-data: reduce) {
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;body {
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, Helvetica, sans-serif;
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;}
+        <br/>}
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

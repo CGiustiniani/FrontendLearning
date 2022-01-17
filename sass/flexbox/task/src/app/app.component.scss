@@ -1,0 +1,162 @@
+$color1: orange;
+$color2: bisque;
+$border: rgb(146, 146, 146);
+$bar1: #33ff01;
+$bar2: #f36700;
+$bar3: #1080c3;
+$bar4: #998820;
+$bar5: #d366dd;
+
+.container {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-bottom: 20px;
+
+
+  &.stretch {
+
+    @media all and (max-width: 600px) {
+      /* for mobile usage here */
+    }
+  }
+
+  .item {
+    background-color: $color2;
+    margin: 5px;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 3em;
+    min-height: 100px;
+    width: calc(20% - 10px);
+    order: 2;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &-first {
+      /* class .item-first here */
+    }
+
+    &-center {
+      /* class .item-center here */
+    }
+    
+    p {
+      line-height: 1em;
+      margin: 0;
+    }
+
+  }
+
+  .box {
+    margin: 10px;
+    padding: 10px;
+    background-color: $color2;
+    height: auto;
+  }
+}
+
+.menubar {
+  background-color: $color1;
+  padding: 10px 0;
+
+
+  @media all and (max-width: 600px) {
+    /* for mobile usage here */
+  }
+
+.nav {
+  li {
+    padding: 0 15px 0;
+  }
+
+    @media all and (max-width: 600px) {
+      width: 100%;
+      /* for mobile usage here */
+
+      li {
+        width: 100%;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+.bars {
+  height: 250px;
+
+  &.horizontal {
+
+    .bar {
+      padding: 5px;
+      width: 50px;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid $border;
+
+    &.bar-1 {
+      background-color: $bar1;
+      height: 20%;
+    }
+
+    &.bar-2 {
+      background-color: $bar2;
+      height: 30%;
+    }
+
+    &.bar-3 {
+      background-color: $bar3;
+      height: 40%
+    }
+
+    &.bar-4 {
+      background-color: $bar4;
+      height: 50%;
+    }
+
+    &.bar-5 {
+      background-color: $bar5;
+      height: 70%;
+    }
+
+  }
+  }
+
+   &.vertical {
+
+    .bar {
+      padding: 5px;
+      width: 80px;
+      text-align: right;
+      font-weight: bold;
+      border: 1px solid $border;
+
+      &.bar-1 {
+        background-color: $bar1;
+        width: 20%;
+      }
+
+      &.bar-2 {
+        background-color: $bar2;
+        width: 30%;
+      }
+
+      &.bar-3 {
+        background-color: $bar3;
+        width: 40%
+      }
+
+      &.bar-4 {
+        background-color: $bar4;
+        width: 50%;
+      }
+
+      &.bar-5 {
+        background-color: $bar5;
+        width: 70%;
+      }
+    } 
+  } 
+}

@@ -1,0 +1,29 @@
+{
+    "instructions": {
+      "headline": "Upute",
+      "instruction01": "tekst upute 1",
+      "instruction02": "tekst upute 2",
+      "instruction03": "tekst upute 3",
+      "instruction04": "tekst upute 4",
+      "instruction05": "tekst upute 5",
+      "instruction06": "tekst upute 6",
+      "instruction07": "tekst upute 7",
+      "instruction08": "tekst upute 8",
+      "instruction09": "tekst upute 9",
+      "instruction10": "tekst upute 10",
+      "instruction11": "tekst upute 11",
+      "instruction12": "tekst upute 12",
+      "instruction13": "tekst upute 13",
+      "instruction14": "tekst upute 14",
+      "instruction15": "tekst upute 15",
+      "instruction16": "tekst upute 16",
+      "subInstruction16": "tekst upute 16a",
+      "instruction17": "tekst upute 17"
+    },
+    "language": {
+      "headline": "Izbor Jezika",
+      "langEN": "Engleski",
+      "langDE": "Njemački",
+      "langHR": "Hrvatski"
+    }
+  }

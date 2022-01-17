@@ -1,0 +1,33 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Instructions</h5>
+  <div class="card-body">
+    <ul>
+      <li>
+        Convert the code below and in the
+        <strong>app.component.scss</strong> file to valid BEM - properly
+        identify the building blocks and update their class names.
+      </li>
+      <li>
+        Use all SASS techniques that you have learned to make the code in the
+        stylesheet more lean and reusable.
+      </li>
+    </ul>
+  </div>
+</div>
+<hr />
+<section class="c-teaser">
+  <ul class="teaser-list">
+    <li
+      *ngFor="let teaser of teasers"
+      class="list-item"
+      [ngClass]="!teaser.published && 'hidden'"
+    >
+      <img src="{{teaser.imagePath}}" alt="{{teaser.title}}" />
+      <div class="teaser-content">
+        <h3>{{ teaser.title }}</h3>
+        <p>{{ teaser.excerpt }}</p>
+      </div>
+    </li>
+  </ul>
+</section>

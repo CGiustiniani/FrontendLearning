@@ -1,0 +1,18 @@
+<h3>Hello!</h3>
+
+This is the link for <a routerLink="/">home page</a>.
+
+<h3>Cart</h3>
+You can also visit: <a [routerLink]="{ cxRoute: 'cart' } | cxUrl">Cart</a>
+
+<h3>Special product</h3>
+Special offer today:
+<a
+  [routerLink]="
+    {
+      cxRoute: 'product',
+      params: { code: '2278102' }
+    } | cxUrl
+  "
+  >Product</a
+>
