@@ -1,0 +1,37 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li><span>In app module find appRoutes variable and add routes (welcome, products, cart, contact) pointing to each of defined components.</span>
+			</li>
+			<br/>
+			<li><span>In the same module, after dealing with appRoutes, enable routing buy adding <i>RouterModule.forRoot(appRoutes)</i> to imports section of <i>@NgModule</i> and then uncomment <i>router-outlet</i> element in app html.</span>
+			</li>
+			<br/>
+			<li><span>Afterwards, open navBar html and interconnect previously defined routes with navigation element by using <i>RouterLink</i>.</span>
+			</li>
+			<br/>
+			<li><span>Implement functionality of being able to return back to Welcome page via navigation bar by adding property <i>pathMatch: 'full'</i> to welcome page route in <i>appRoutes</i> const.</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Router pt. 2</h5>
+	<div class="card-body">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xs-12">
+					<app-nav-bar></app-nav-bar>
+				</div>
+			</div>
+			<div class="row justify-content-center margin-top-down">
+				<div class="col-xs-12">
+					<!-- <router-outlet></router-outlet> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

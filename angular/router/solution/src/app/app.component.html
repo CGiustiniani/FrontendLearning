@@ -1,0 +1,34 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li>
+				<h6>1) Add a route to link the path / to the overview component. Please be aware of the pathMatch
+					property. (app.module.ts)</h6>
+			</li>
+			<li>
+				<h6>2) Add a route for the Greet Component. The route should pass the a name as a string parameter.</h6>
+			</li>
+			<li>
+				<h6>3) Adjust the overview.component.ts to redirect to the greet route when the button was clicked and
+					add the entered name. (greet.component.ts)</h6>
+			</li>
+			<li>
+				<h6>4) Adjust the greet component so that the name parameter of your route is being outputted in the template.</h6>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Routes</h5>
+	<div class="card-body">
+		<router-outlet>
+		</router-outlet>
+	</div>
+	<hr />
+	<a [routerLink]="['/overview']" class="btn-primary btn">Click for gettting directed to the Overview Page</a>
+	<hr />
+	<a [routerLink]="['/']" class="btn-primary btn">Click for gettting directed to the Start Page</a>
+</div>

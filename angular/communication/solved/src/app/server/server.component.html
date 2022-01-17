@@ -1,0 +1,15 @@
+<br/>
+<div class="row">
+	<div class="col">
+		<span>{{ server.name }}</span>
+	</div>
+	<div class="col">
+		<span>{{ server.status }}</span>
+	</div>
+	<div class="col">
+		<Button class="btn btn-success" (click)="turnOn(server.name)">ON</Button>
+	</div>
+	<div class="col">
+		<Button class="btn btn-danger" (click)="turnOff(server.name)">OFF</Button>
+	</div>
+</div>

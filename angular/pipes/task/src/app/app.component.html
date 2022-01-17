@@ -1,0 +1,39 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Instructions</h5>
+  <div class="card-body">
+    <ul>
+      <li><h6>Bind to the Form Fields so the Results represent the form field values</h6></li>
+      <li><h6>Use Angular Currency Pipe so the Currency Result is shown without decimals after comma</h6></li>
+      <li><h6>Use Angulars Date Pipe so the Date Result is shown in this format dd-mm-yyyy</h6>
+      <li><h6>Use Angulars Uppercase Pipe so the Text Result is shown in uppercase</h6></li>
+      <li><h6>Create a custom truncate pipe to truncate text longer than 5 letter and show "..." instead</h6></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card m-3">
+    <h5 class="card-header">Pipes</h5>
+    <div class="card-body">      
+            <div class="form-group">
+                <label>Currency</label>
+                <input type="text" class="form-control" value="146.27"/>
+                <div>Result: €146</div>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="text" class="form-control" value="06/05/2020"/>
+                <div>Result: 06.05.2020</div>
+            </div>
+            <div class="form-group">
+                <label>Uppercase</label>
+                <input type="text" class="form-control" value="angular playground"/>
+                <div>Result: ANGULAR PLAYGROUND</div>
+            </div>
+            <div class="form-group">
+                <label>Truncate</label>
+                <input type="text" class="form-control" value="playground"/>
+                <div>Result: playg...</div>
+            </div>
+    </div>
+</div>

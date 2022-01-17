@@ -1,0 +1,32 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li>
+				<h6>1) Configure the Http Interceptor (interceptor.service) in the app.module.ts file</h6>
+			</li>
+			<li>
+				<h6>2) Add the InterceptorMonitor service to the Http Interceptor</h6>
+			</li>
+			<li>
+				<h6>3) Execute the start() method before the request starts and execute stop() after the request has been finalized.</h6>
+			</li>
+			<li>
+				<h6>4) Add a header with the key and value "Authentication" to each request.</h6>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Routes</h5>
+	<div class="card-body">
+	<h3>Http Request</h3>
+  <p>Please click the button to trigger a Http Request<p>
+  <button (click)="onRequest()">Begin Http Request</button>
+  <div class="alert alert-info" role="alert" *ngIf="this.state">
+  Http Request loading
+</div>
+	</div>
+</div>

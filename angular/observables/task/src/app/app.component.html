@@ -1,0 +1,35 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li>
+				<h6>1) Get observerable data from observerable service. </h6>
+			</li>			
+      <li>
+				<h6>2) Add pipe with tap to log data in console.</h6>
+			</li>
+      <li>
+				<h6>3) Set data from observerable to component attributes  </h6>
+			</li>
+      <li>
+				<h6>4) Data should be shown in output field.</h6>
+			</li>			
+		</ul>
+	</div>
+</div>
+
+
+<div class="card m-3">
+	<h5 class="card-header">Output</h5>
+	<div class="card-body">
+    <p>
+      Id: {{this.id}}
+    </p>
+    <p>
+	  	Word: {{this.word}}
+    </p>
+
+    <button (click)="workWithObserverable()">Get Oberserverable</button>
+	</div>
+</div>

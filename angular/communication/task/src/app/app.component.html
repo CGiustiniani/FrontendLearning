@@ -1,0 +1,29 @@
+<!-- main app container -->
+<div class="card m-3">
+	<h5 class="card-header">Instructions</h5>
+	<div class="card-body">
+		<ul>
+			<li><span>Enable showing server list on the page. Connect server component with server list component by using property binding and <i>@Input decorator</i>.</span>
+			</li>
+			<br/>
+			<li><span>Enable new server creation. Find generator component and in HTML file connect input element with <i>serverName</i> variable. HINT: Use <i>ngModel</i> attribute.</span>
+			</li>
+			<br/>
+			<li><span>Enable server list update on server creation. We need to notify servers list that the generator has created new server. HINT: Use <i>@Output</i> decorator and Event Emitter.</span>
+			</li>
+			<br/>
+			<li><span>Enable server turn ON/OFF timestamp logging on the page itself. Interacting components are in fact siblings, so exchanging data via service is used. Your task is to inject ServerActivationTimestamp service in a server component and uncomment the remaining lines.</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="card m-3">
+	<h5 class="card-header">Angular Communication</h5>
+	<div class="card-body">
+		<div>
+			<app-server-list></app-server-list>
+			<app-timestamp></app-timestamp>
+		</div>
+	</div>
+</div>

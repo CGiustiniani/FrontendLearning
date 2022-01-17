@@ -1,0 +1,7 @@
+<br />
+<div class="container">
+	<app-generator (serverRegisterEvent)="receiveRegistrationRequest($event)"></app-generator>
+	<br />
+	<hr />
+	<app-server [server]="server" *ngFor="let server of serverList"></app-server>
+</div>
