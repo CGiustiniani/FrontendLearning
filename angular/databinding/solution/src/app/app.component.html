@@ -1,0 +1,32 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Instructions</h5>
+  <div class="card-body">
+    <ul>
+      <li><span>Implement the getName function in the data model class(model.ts) to return the name of the user (see user property)</span></li>
+       <li><span>Use the getName function as the one-way data binding in the template (see app.component.html) to display the user'name from the Model class in the first H5 tag(ToDo List)</span></li>
+       <li><span>Use the two-way binding to connect the Done checkbox with the done property of the TodoItem class. Once the item is checked, it disappears from the list. (see model.ts and app.component.html)</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card m-3">
+    <h5 class="card-header">{{getName()}}'s To Do List</h5>
+    <div class="card-body">
+      <table class="table table-striped table-bordered">
+    <thead>
+        <tr><th></th><th>Description</th><th>Done</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getTodoItems(); let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.action}}</td>
+            <td><input type="checkbox" [(ngModel)]="item.done" /></td>
+        </tr>           
+    </tbody>
+</table>
+</div>
+</div>
+
+
+
