@@ -1,0 +1,42 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h5 class="card-header">Instructions</h5>
+    <div class="card-body">
+    <span>Display the list of the TODO items in the table format, according to the following requirements:</span>
+    <ul>
+       <li><span>First column should show the number of the current item.</span></li>
+       <li><span>Second column should show the action of the item</span></li>
+       <li><span>Third column column should show the checkbox if the item has not been done yet and "Yes" if the item has been done.</span></li>
+        <li><span>Once the checkbox has been clicked, "done" property of the TODO item needs to be updated accordingly</span></li>
+       <li><span>If the item has been done, the corresponding row in the table should have bg-success background color, otherwise bg-warning</span></li>
+      <li><span>Message about the items which need to be done(div tag under the table ), should be displayed if there is at least one todo item</span></li>
+    </ul>
+</div>
+</div>
+
+<div class="card m-3">
+    <h5 class="card-header">{{getName()}}'s To Do List</h5>
+    <div class="card-body">
+      <table class="table table-striped table-bordered">
+    <thead>
+        <tr><th></th><th>Description</th><th>Done</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getTodoItems(); let i = index" [ngClass]="getClassMap(i)">
+            <td>{{i + 1}}</td>
+            <td>{{item.action}}</td>
+            <td [ngSwitch]="item.done">
+              <input *ngSwitchCase="false" type="checkbox" [(ngModel)]="item.done" />
+              <span *ngSwitchCase="true">Yes</span>
+            </td>
+        </tr>           
+    </tbody>
+</table>
+
+<div *ngIf="areUnresolvedItems() > 0" class="bg-info p-2 mt-1">
+  There are items which need to be done
+</div>
+</div>
+
+
+
