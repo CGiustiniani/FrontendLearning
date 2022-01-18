@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Inject } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -41,7 +41,7 @@ const routes: Routes = [
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(library: FaIconLibrary) {
+  constructor(@Inject(FaIconLibrary) library: FaIconLibrary) {
     library.addIcons(
       faTrash,
       faSmileWink,

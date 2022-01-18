@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth.service';
@@ -17,8 +17,8 @@ export class TodosComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   constructor(
-    private authService: AuthService,
-    private todoService: TodosService
+    @Inject(AuthService) private authService: AuthService,
+    @Inject(TodosService) private todoService: TodosService
   ) {}
 
   ngOnInit(): void {
