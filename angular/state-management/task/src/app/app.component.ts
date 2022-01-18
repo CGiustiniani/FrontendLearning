@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from './auth.service';
 import { TodosService } from './todos/todos.service';
@@ -15,7 +15,7 @@ export class AppComponent {
   doneTodoCount: number = 0; //number of finished todos
   todoCount: number = 5; //total number of todos
 
-  constructor(public authService: AuthService) {}
+  constructor(@Inject(AuthService) public authService: AuthService) {}
 
   ngOnInit(): void {
     this.authSubscription = this.authService.authState$.subscribe(
