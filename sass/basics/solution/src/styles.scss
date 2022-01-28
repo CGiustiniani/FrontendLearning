@@ -1,1 +1,27 @@
+$primary: #82b1ff;
+$secondary: #4d82cb;
+$base-size: 18px;
 
+.content {
+  padding: 0 1em;
+  font-size: $base-size;
+
+  &-heading {
+    margin-bottom: $base-size / 2;
+    border-bottom: 2px solid $secondary;
+    color: $primary;
+    font-size: $base-size * 2;
+  }
+
+  &-list {
+    list-style: none;
+
+    li {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
