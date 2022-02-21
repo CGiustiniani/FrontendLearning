@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+# Form controls - exercises
+
+1. Create a form which will ask for following fields:
+    - username
+    - password
+    - subscription to newsletter
+
+2. Create a form which will ask for following fields:
+    - first name
+    - last name
+    - email
+    - favourite dinosaur (single selection)
+    - image of dinosaur (in *.png format)
+    - favourite frontend technologies (multiple selections)
+    - favourite color
+    - slider for years of experience with frontend (min: 0, max: 15, step: 0.5, with the output)
+    - autocomplete with a favourite food
+
+</body>
+
+<script>
+    const feExperience = document.getElementById('feExperience');
+    const output = document.getElementById('feExperienceOutput');
+
+    // initial value
+    output.textContent = feExperience.value;
+
+    // on input change
+    feExperience.addEventListener('input', () => {
+        output.textContent = feExperience.value;
+    });
+</script>
+</html>
