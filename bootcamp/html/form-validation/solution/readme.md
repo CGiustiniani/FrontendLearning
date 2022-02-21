@@ -1,4 +1,3 @@
-# Form validation
 
 Validation is a process of verifying whether all required form controls are filled out in a correct format. This
 validation can be done on client side, and is called _client side validation_.
