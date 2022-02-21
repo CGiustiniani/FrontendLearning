@@ -1,4 +1,4 @@
-# Forms and their structure
+## Forms and their structure
 
 Web forms are one of the main points of interaction between the user and a web site. With forms, users can enter data
 which is sent to web server for processing and storage, or used on the client-side to update the UI.
