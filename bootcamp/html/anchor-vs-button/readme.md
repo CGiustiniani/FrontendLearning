@@ -1,5 +1,3 @@
-# Anchor vs. Button
-
 When it comes to interactivity on the web, it all boils down to two elements. Anchor and button.
 
 ## Anchor
@@ -61,7 +59,3 @@ But, in the end, it's really simple. We cannot just guess the element visually, 
 [bits of code](https://bitsofco.de/anchors-vs-buttons/)
 [css tricks](https://css-tricks.com/use-button-element/)
 [smashing magazine](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)
-
-## Pagination
-
-[next](../02-intro-to-forms/readme.md)
