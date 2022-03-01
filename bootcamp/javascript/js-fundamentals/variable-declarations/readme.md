@@ -203,4 +203,4 @@ greeting.message = "say Hello instead";
 - While `var` and `let` can be declared without being initialized, `const` must be initialized during declaration.
 
 ### Exercises
-1. [Var, let and const](task/var-let-const.md)
+1. [Var, let and const](task/var-let-const.js)

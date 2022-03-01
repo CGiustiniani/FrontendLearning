@@ -236,4 +236,4 @@ console.log(new Set(numbers));
 ```
 
 ### Exercises
-1. [Data types](task/data-type.md)
+1. [Data types](task/data-type.js)
