@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .info {
+        font-size: 1em;
+        color: #888;
+        margin-bottom: 20px;
+      }
+
+      /* Example */
+      .container {
+        border: 3px solid lightcoral;
+        /* follow the steps from help section */
+      }
+
+      /* 
+       * Task 1 
+       * Grid page layout 
+      */
+      header,
+      .header {
+        background-color: #c9d8b6;
+      }
+      nav,
+      .nav {
+        background-color: #57837b;
+      }
+      main,
+      .main {
+        background-color: #f1ecc3;
+      }
+      footer,
+      .footer {
+        background-color: #515e63;
+        color: white;
+        font-size: 0.75rem;
+      }
+
+      nav ul,
+      .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li,
+      .nav ul li {
+        margin-bottom: 10px;
+      }
+      nav ul a,
+      .nav ul a {
+        color: white;
+      }
+
+      .content {
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .grid-layout-container {
+        max-width: 1000px;
+        margin: 1.5rem auto;
+
+        /* task 1 (your code here) */
+      }
+
+      header {
+        /* task 1 (your code here) */
+      }
+
+      nav {
+        /* task 1 (your code here) */
+      }
+
+      main {
+        /* task 1 (your code here) */
+      }
+
+      footer {
+        /* task 1 (your code here) */
+      }
+
+      /* 
+       * Task 2: 
+       * Old Grid Code 
+      */
+      [class^='col-'] div {
+        background-color: lightgray;
+        height: 50px;
+      }
+
+      .row {
+        margin: 0 -10px;
+      }
+
+      .row::after {
+        clear: both;
+        content: '';
+        display: block;
+      }
+
+      .old-grid-container [class^='col-'] {
+        padding: 0 10px;
+        float: left;
+        margin-bottom: 10px;
+      }
+
+      .old-grid-container .col-12 {
+        width: 100%;
+      }
+      .old-grid-container .col-6 {
+        width: 50%;
+      }
+      .old-grid-container .col-4 {
+        width: 33.33%;
+      }
+      .old-grid-container .col-3 {
+        width: 25%;
+      }
+
+      /* New Grid Code - solution 2 */
+      .new-grid-container div > div {
+        background-color: lightgray;
+        height: 50px;
+      }
+
+      .new-grid-container {
+        /* task 2 (your code here) */
+      }
+      .col-12 {
+        /* task 2 (your code here) */
+      }
+      .col-6 {
+        /* task 2 (your code here) */
+      }
+      .col-5 {
+        /* task 2 (your code here) */
+      }
+      .col-4 {
+        /* task 2 (your code here) */
+      }
+      .col-3 {
+        /* task 2 (your code here) */
+      }
+      .col-2 {
+        /* task 2 (your code here) */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Grid example</h1>
+      <div class="info">Follow the steps from Help section</div>
+
+      <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+    <section>
+      <h1>Task 1: Create following layout using CSS Grid and Flexbox</h1>
+
+      <div class="grid-layout-container">
+        <table style="border-spacing: 10px">
+          <tr>
+            <td
+              class="nav content"
+              rowspan="4"
+              style="vertical-align: top; text-align: center"
+            >
+              <ul>
+                <li>
+                  <a href="#">Our Products</a>
+                </li>
+                <li>
+                  <a href="#">Our Services</a>
+                </li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="content header">Header</td>
+          </tr>
+          <tr>
+            <td class="content main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              ipsum repellendus sit quibusdam minima recusandae dicta harum
+              praesentium soluta. Quibusdam molestiae animi ex repellat
+              recusandae illo fugit asperiores! Facere, non necessitatibus,
+              quasi perferendis totam voluptatibus commodi inventore iste
+              excepturi cumque praesentium dolore. Natus illo rem earum illum?
+              Deserunt vero repellendus quasi blanditiis quae omnis, debitis
+              libero amet veniam unde nam eligendi ipsam quibusdam est
+              voluptate? Quas, ex nobis. Nemo harum distinctio laudantium
+              deserunt sed omnis voluptatum quos numquam quam fuga veniam fugiat
+              tempore quod animi, impedit a minima nostrum facilis quidem
+              aperiam veritatis. Quidem, reprehenderit quia quod maxime sapiente
+              maiores.
+            </td>
+          </tr>
+          <tr>
+            <td class="content footer">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+              non.
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h1>Solution 1:</h1>
+
+      <div class="grid-layout-container">
+        <header class="content">Header</header>
+
+        <nav class="content">
+          <ul>
+            <li><a href="#">Our Products</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <main class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsum
+          repellendus sit quibusdam minima recusandae dicta harum praesentium
+          soluta. Quibusdam molestiae animi ex repellat recusandae illo fugit
+          asperiores! Facere, non necessitatibus, quasi perferendis totam
+          voluptatibus commodi inventore iste excepturi cumque praesentium
+          dolore. Natus illo rem earum illum? Deserunt vero repellendus quasi
+          blanditiis quae omnis, debitis libero amet veniam unde nam eligendi
+          ipsam quibusdam est voluptate? Quas, ex nobis. Nemo harum distinctio
+          laudantium deserunt sed omnis voluptatum quos numquam quam fuga veniam
+          fugiat tempore quod animi, impedit a minima nostrum facilis quidem
+          aperiam veritatis. Quidem, reprehenderit quia quod maxime sapiente
+          maiores.
+        </main>
+
+        <footer class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          non.
+        </footer>
+      </div>
+    </section>
+
+    <br /><br /><br />
+    <section>
+      <h1>Task 2: Create your own 12 column grid system using CSS Grid.</h1>
+      <div class="old-grid-container">
+        <div class="row">
+          <div class="col-12">
+            <div></div>
+          </div>
+          <div class="col-3">
+            <div></div>
+          </div>
+          <div class="col-3">
+            <div></div>
+          </div>
+          <div class="col-3">
+            <div></div>
+          </div>
+          <div class="col-3">
+            <div></div>
+          </div>
+          <div class="col-4">
+            <div></div>
+          </div>
+          <div class="col-4">
+            <div></div>
+          </div>
+          <div class="col-4">
+            <div></div>
+          </div>
+          <div class="col-6">
+            <div></div>
+          </div>
+          <div class="col-6">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Solution 2:</h1>
+
+      <div class="new-grid-container">
+        <div class="col-12"><div>col-12</div></div>
+        <div class="col-6"><div>col-6</div></div>
+        <div class="col-6"><div>col-6</div></div>
+        <div class="col-5"><div>col-5</div></div>
+        <div class="col-5"><div>col-5</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-4"><div>col-4</div></div>
+        <div class="col-4"><div>col-4</div></div>
+        <div class="col-4"><div>col-4</div></div>
+        <div class="col-3"><div>col-3</div></div>
+        <div class="col-3"><div>col-3</div></div>
+        <div class="col-3"><div>col-3</div></div>
+        <div class="col-3"><div>col-3</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-2"><div>col-2</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+        <div class="col-1"><div>col-1</div></div>
+      </div>
+    </section>
+  </body>
+</html>

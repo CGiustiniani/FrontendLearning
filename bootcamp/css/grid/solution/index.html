@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      /* Grid example */
+      .example-container {
+        border: 3px solid lightcoral;
+        display: grid;
+        grid-template: 100px auto 100px / 30fr 70fr;
+        grid-template-areas:
+          'header     header'
+          'sidebar    main'
+          '.     footer';
+        gap: 10px;
+        height: 70vh;
+      }
+
+      .box {
+        background-color: lightcoral;
+      }
+
+      .box-1 {
+        grid-area: header;
+      }
+      .box-4 {
+        grid-area: footer;
+      }
+
+      /* Solution 1 */
+      header {
+        background-color: #c9d8b6;
+      }
+      nav {
+        background-color: #57837b;
+      }
+      main {
+        background-color: #f1ecc3;
+      }
+      footer {
+        background-color: #515e63;
+      }
+
+      .grid-layout-container {
+        max-width: 1000px;
+        margin: 1.5rem auto;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+          'nav  header'
+          'nav     main'
+          'nav  footer';
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      nav {
+        grid-area: nav;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin-bottom: 10px;
+      }
+      nav ul a {
+        color: white;
+      }
+
+      footer {
+        color: white;
+        grid-area: footer;
+        font-size: 0.75rem;
+      }
+
+      .content {
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      /* Solution 2 */
+      .new-grid-container div > div {
+        background-color: lightgray;
+        height: 50px;
+      }
+
+      .new-grid-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+      }
+
+      .col-12 {
+        grid-column: span 12;
+      }
+      .col-6 {
+        grid-column: span 6;
+      }
+      .col-5 {
+        grid-column: span 5;
+      }
+      .col-4 {
+        grid-column: span 4;
+      }
+      .col-3 {
+        grid-column: span 3;
+      }
+      .col-2 {
+        grid-column: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid example</h1>
+
+    <div class="example-container">
+      <div class="box box-1">Box 1</div>
+      <div class="box box-2">Box 2</div>
+      <div class="box box-3">Box 3</div>
+      <div class="box box-4">Box 4</div>
+    </div>
+
+    <h1>Solution 1</h1>
+
+    <div class="grid-layout-container">
+      <header class="content">Header</header>
+
+      <nav class="content">
+        <ul>
+          <li><a href="#">Our Products</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsum
+        repellendus sit quibusdam minima recusandae dicta harum praesentium
+        soluta. Quibusdam molestiae animi ex repellat recusandae illo fugit
+        asperiores! Facere, non necessitatibus, quasi perferendis totam
+        voluptatibus commodi inventore iste excepturi cumque praesentium dolore.
+        Natus illo rem earum illum? Deserunt vero repellendus quasi blanditiis
+        quae omnis, debitis libero amet veniam unde nam eligendi ipsam quibusdam
+        est voluptate? Quas, ex nobis. Nemo harum distinctio laudantium deserunt
+        sed omnis voluptatum quos numquam quam fuga veniam fugiat tempore quod
+        animi, impedit a minima nostrum facilis quidem aperiam veritatis.
+        Quidem, reprehenderit quia quod maxime sapiente maiores.
+      </main>
+
+      <footer class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, non.
+      </footer>
+    </div>
+
+    <h1>Solution 2</h1>
+
+    <div class="new-grid-container">
+      <div class="col-12"><div>col-12</div></div>
+      <div class="col-6"><div>col-6</div></div>
+      <div class="col-6"><div>col-6</div></div>
+      <div class="col-5"><div>col-5</div></div>
+      <div class="col-5"><div>col-5</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-4"><div>col-4</div></div>
+      <div class="col-4"><div>col-4</div></div>
+      <div class="col-4"><div>col-4</div></div>
+      <div class="col-3"><div>col-3</div></div>
+      <div class="col-3"><div>col-3</div></div>
+      <div class="col-3"><div>col-3</div></div>
+      <div class="col-3"><div>col-3</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-2"><div>col-2</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+      <div class="col-1"><div>col-1</div></div>
+    </div>
+  </body>
+</html>
