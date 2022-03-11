@@ -20,9 +20,9 @@ html {
 }
 
 /* 
-       * Task 1 
-       * Grid page layout 
-      */
+* Task 1 
+* Grid page layout 
+*/
 header,
 .header {
   background-color: #c9d8b6;
@@ -87,9 +87,9 @@ footer {
 }
 
 /* 
-       * Task 2: 
-       * Old Grid Code 
-      */
+* Task 2: 
+* Old Grid Code 
+*/
 [class^='col-'] div {
   background-color: lightgray;
   height: 50px;
