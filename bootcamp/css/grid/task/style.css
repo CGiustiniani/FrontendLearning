@@ -19,10 +19,26 @@ html {
   /* follow the steps from help section */
 }
 
+.box {
+  background-color: lightcoral;
+}
+
+.box-1 {
+  /* follow the steps from help section */
+}
+.box-4 {
+  /* follow the steps from help section */
+}
+
 /* 
 * Task 1 
 * Grid page layout 
 */
+.table-layout-container {
+  max-width: 1020px;
+  margin: 1.5rem auto;
+}
+
 header,
 .header {
   background-color: #c9d8b6;
