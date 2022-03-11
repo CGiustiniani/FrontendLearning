@@ -11,91 +11,34 @@ Typical layout for most websites:
 Lines can be horizontal or vertical.
 They are referred to by number and can be named.
 
-<table>
-<tr>
-  <td style="border: 0; font-size: 10px; text-align: left; padding: 0">1</td>
-  <td style="border: 0; font-size: 10px; text-align: left; padding: 0">2</td>
-  <td style="border: 0; font-size: 10px; text-align: left; padding: 0">3</td>
-  <td style="border: 0; font-size: 10px; text-align: left; padding: 0">4</td>
-</tr>
-<tr>
-<td style="border-right: 2px solid #609AC4"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="border-right: 2px solid #609AC4"></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-<sub>The highlighted is Column Line 2.</sub>
+![css-tricks](https://css-tricks.com/wp-content/uploads/2018/11/terms-grid-line.svg)
+<sub>The highlighted is Column Line **3**.</sub>
 
 ## Grid Track
 
 A Grid Track is the space between two Grid Lines.
 It can be horizontal or vertical (row/column).
 
-<table>
-<tr>
-<td style="border: 0; font-size: 10px; text-align: left; padding: 0 2px 10px 0">1</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="border: 0; font-size: 10px; text-align: left; padding: 0 2px 10px 0">2</td>
-<td style="background: #609AC4"></td>
-<td style="background: #609AC4"></td>
-<td style="background: #609AC4"></td>
-</tr>
-<tr>
-  <td style="border: 0; font-size: 10px; text-align: left; padding: 0 2px 10px 0">3</td>
-</tr>
-</table>
-
-<sub>The highlighted Grid Track is between Row Lines 2 and 3.</sub>
+![css-tricks](https://css-tricks.com/wp-content/uploads/2021/08/terms-grid-track.svg)
+<sub>The highlighted Grid Track is between Row Lines **2** and **3**.</sub>
 
 ## Grid Cell
 
 Smallest unit in our grid.
 It’s the space between four Grid Lines.
 
-<table>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="background: #609AC4"></td>
-<td></td>
-<td></td>
-</tr>
-</table>
+![css-tricks](https://css-tricks.com/wp-content/uploads/2018/11/terms-grid-cell.svg)
 
-<sub>The highlighted Grid Cell is between row lines 2 and 3, and column lines 1 and 2.</sub>
+<sub>The highlighted Grid Cell is between row lines **1** and **2**, and column lines **2** and **3**.</sub>
 
 ## Grid Area
 
 An area of the Grid bound by 4 Grid Lines.
 It can contain many Grid Cells.
 
-<table>
-<tr>
-<td style="background: #609AC4"></td>
-<td style="background: #609AC4"></td>
-<td></td>
-</tr>
-<tr>
-<td style="background: #609AC4"></td>
-<td style="background: #609AC4"></td>
-<td></td>
-</tr>
-</table>
+![css-tricks](https://css-tricks.com/wp-content/uploads/2018/11/terms-grid-area.svg)
 
-<sub>The highlighted Grid Area is between row lines 1 and 3, column lines 1 and 3.</sub>
+<sub>The highlighted Grid Area is between row lines **1** and **3**, column lines **1** and **3**.</sub>
 
 &nbsp;&nbsp;
 
@@ -449,3 +392,4 @@ If we want an empty cell in our areas, we specify a period.
 ## References
 
 [medium](https://medium.com/hackernoon/learn-basic-html-be230361457)
+[css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
