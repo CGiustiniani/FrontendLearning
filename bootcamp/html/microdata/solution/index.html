@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Structured Data exercise</title>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "JobPosting",
+            "description": "Our hearts beat for digital, for varied projects and a steep learning curve. As a part of the IBM iX network, we work with our technology partners to realise digital platforms for the most diverse industries, always while looking ahead to the future. The best part of it? Solid teams! User experience, back-end and testing experts work together in scrum teams and learn from each other. Do you want to join?",
+            "datePosted": "2020-09-30",
+            "employmentType": "FULL_TIME",
+            "hiringOrganization": {
+                "@type": "Organization",
+                "name": "ecx.io",
+                "sameAs": "http://ecx.io",
+                "logo": ""
+            },
+            "jobLocation": [
+                {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Business Center 2000, Building D3 - 7. floor, Radnicka 37A",
+                        "addressLocality": "Zagreb (CRO)",
+                        "addressRegion": null,
+                        "postalCode": "10000",
+                        "addressCountry": "HR"
+                    }
+                },
+                {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Kapucinski trg 5 (ZABA, 3. floor)",
+                        "addressLocality": "Varazdin (CRO)",
+                        "addressRegion": null,
+                        "postalCode": "42000",
+                        "addressCountry": "HR"
+                    }
+                }
+            ],
+            "title": "Frontend Developer (f/m/d)",
+            "validThrough": "2021-07-31"
+        }
+    </script>
+</head>
+<body>
+
+    <h1>
+        Create Job Posting structured data in both schema.org and JSON-LD types. You can use <a href="https://jobs.ecx.io/Frontend-Developer-fmd-eng-j121.html">this</a> job ad as a base. (job.html)
+    </h1>
+        
+    <div itemscope itemtype="https://schema.org/JobPosting">
+        <h1 itemprop="title">Frontend Developer (f/m/d)</h1>
+        
+        <p itemprop="description">
+            Our hearts beat for digital, for varied projects and a steep learning curve. As a part of the IBM iX network, we work with our technology partners to realise digital platforms for the most diverse industries, always while looking ahead to the future. The best part of it? Solid teams! User experience, back-end and testing experts work together in scrum teams and learn from each other. Do you want to join?
+        </p>
+        
+        <p>Date Posted: <span itemprop="datePosted">2020-09-30</span>.</p>
+        <p>Valid until: <span itemprop="validThrough">2021-01-31</span>.</p>
+        <p>Employment type: <span itemprop="employmentType">Full-time</span>.</p>
+        
+        <div itemprop="hiringOrganization" itemscope itemtype="https://schema.org/Organization">
+            <strong itemprop="name">ecx.io</strong>
+        </div>
+        
+        <ul itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
+            <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Kapucinski trg 5 (ZABA, 3. floor)</span>
+                <span itemprop="addressLocality">Varazdin (CRO)</span>
+                <span itemprop="postalCode">42000</span>
+                <span itemprop="addressCountry">HR</span>
+            </li>
+            <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Business Center 2000, Building D3 - 7. floor, Radnicka 37A</span>
+                <span itemprop="addressLocality">Zagreb (CRO)</span>
+                <span itemprop="postalCode">10000</span>
+                <span itemprop="addressCountry">HR</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
