@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form validation exercise</title>
+    <style>
+        input:valid, textarea:valid {
+            border: 2px solid green;
+        }
+
+        input:invalid, textarea:invalid {
+            border: 2px solid red;
+        }
+
+        input:invalid:required, textarea:invalid:required {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form validation - exercises</h1>
+
+    <ol>
+    <li>
+        Create a form which will ask for following fields:
+        <ul>
+            <li>username</li>
+            <li>email address</li>
+            <li>phone number</li>
+            <li>comment (multiline text)</li>
+        </ul>
+    </li>
+    <li>
+        Add following validation:
+        <ul>
+            <li>make all form controls mandatory</li>
+            <li>give the username field a required length between 5 and 20 characters</li>
+            <li>give the phone field maximum length of 15 characters</li>
+            <li>give the comment field maximum length of 100 characters</li>
+            <li>usernames should consist of a single lowercase letter, followed by a dot, and the rest any of lowercase letters</li>
+        </ul>
+    </li>
+    </ol>
+    
+    <h1>Form #1</h1>
+<form>
+    <ul>
+        <li>
+            <label for="username">User name:</label>
+            <input type="text" name="username" id="username" required minlength="5" maxlength="20"
+                   pattern="[a-z]\.[a-z]*"/>
+        </li>
+        <li>
+            <label for="email">Email address:</label>
+            <input type="email" name="email" id="email" required/>
+        </li>
+        <li>
+            <label for="phone">Phone number:</label>
+            <input type="tel" name="phone" id="phone" required maxlength="15"/>
+        </li>
+        <li>
+            <label for="comment">Comment:</label>
+            <textarea name="comment" id="comment" required maxlength="100"></textarea>
+        </li>
+        <li>
+            <button>Submit</button>
+        </li>
+    </ul>
+</form>
+</body>
+</html>
