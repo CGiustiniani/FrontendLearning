@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-/* Solution 2 */
+/* Solution */
 .new-grid-container div > div {
   background-color: lightgray;
   height: 50px;
