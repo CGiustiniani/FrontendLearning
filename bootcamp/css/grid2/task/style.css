@@ -20,6 +20,7 @@ html {
 .flex-left {
   flex: 1 0 auto;
   margin-right: 10px;
+  text-align: center;
 }
 
 .flex-right header {
