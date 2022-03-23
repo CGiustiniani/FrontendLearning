@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* 
+* Task 1 
+* Grid page layout 
+*/
+.table-layout-container {
+  max-width: 1020px;
+  margin: 1.5rem auto;
+}
+
+header,
+.header {
+  background-color: #c9d8b6;
+}
+nav,
+.nav {
+  background-color: #57837b;
+}
+main,
+.main {
+  background-color: #f1ecc3;
+}
+footer,
+.footer {
+  background-color: #515e63;
+  color: white;
+  font-size: 0.75rem;
+}
+
+nav ul,
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li,
+.nav ul li {
+  margin-bottom: 10px;
+}
+nav ul a,
+.nav ul a {
+  color: white;
+}
+
+.content {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.grid-layout-container {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+
+  /* task 1 (your code here) */
+}
+
+header {
+  /* task 1 (your code here) */
+}
+
+main {
+  /* task 1 (your code here) */
+}
+
+nav {
+  /* task 1 (your code here) */
+}
+
+footer {
+  /* task 1 (your code here) */
+}
