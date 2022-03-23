@@ -53,6 +53,7 @@ Create an HTML document with following structure:
   <div class="box box-1">Box 1</div>
   <div class="box box-2">Box 2</div>
   <div class="box box-3">Box 3</div>
+  <div class="box box-4">Box 4</div>
 </div>
 ```
 
