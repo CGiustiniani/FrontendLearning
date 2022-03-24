@@ -7,10 +7,9 @@ html {
   box-sizing: inherit;
 }
 
-/* 
-* Task
-* Grid page layout 
-*/
+/* scroll down to where you need to add your css code */
+
+/* old flexbox layout */
 .old-layout-container {
   max-width: 1020px;
   margin: 1.5rem auto;
@@ -34,12 +33,15 @@ html {
 header {
   background-color: #c9d8b6;
 }
+
 nav {
   background-color: #57837b;
 }
+
 main {
   background-color: #f1ecc3;
 }
+
 footer {
   background-color: #515e63;
   color: white;
@@ -55,6 +57,7 @@ nav ul {
 nav ul li {
   margin-bottom: 10px;
 }
+
 nav ul a {
   color: white;
 }
@@ -63,6 +66,8 @@ nav ul a {
   padding: 1rem;
   font-size: 1.5rem;
 }
+
+/* START WORKING HERE */
 
 .grid-layout-container {
   max-width: 1000px;

@@ -7,10 +7,9 @@ html {
   box-sizing: inherit;
 }
 
-/* 
-* Task: 
-* Old Grid Code 
-*/
+/* scroll down to where you need to add your code */
+
+/* Old Grid Code */
 [class^='col-'] div {
   background-color: lightgray;
   height: 50px;
@@ -45,11 +44,13 @@ html {
   width: 25%;
 }
 
-/* New Grid Code - solution */
+/* New Grid Code */
 .new-grid-container div > div {
   background-color: lightgray;
   height: 50px;
 }
+
+/* START WORKING HERE */
 
 .new-grid-container {
   /* task (your code here) */
