@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.info {
+  font-size: 1em;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Example */
+.container {
+  /* follow the steps from help section */
+}
+
+.box {
+  background-color: lightcoral;
+}
+
+.box-1 {
+  /* follow the steps from help section */
+}
+.box-4 {
+  /* follow the steps from help section */
+}

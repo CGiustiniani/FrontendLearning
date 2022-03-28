@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* scroll down to where you need to add your code */
+
+/* Old Grid Code */
+[class^='col-'] div {
+  background-color: lightgray;
+  height: 50px;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+.row::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.old-grid-container [class^='col-'] {
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.old-grid-container .col-12 {
+  width: 100%;
+}
+.old-grid-container .col-6 {
+  width: 50%;
+}
+.old-grid-container .col-4 {
+  width: 33.33%;
+}
+.old-grid-container .col-3 {
+  width: 25%;
+}
+
+/* New Grid Code */
+.new-grid-container div > div {
+  background-color: lightgray;
+  height: 50px;
+}
+
+/* START WORKING HERE */
+
+.new-grid-container {
+  /* task (your code here) */
+}
+.col-12 {
+  /* task (your code here) */
+}
+.col-6 {
+  /* task (your code here) */
+}
+.col-5 {
+  /* task (your code here) */
+}
+.col-4 {
+  /* task (your code here) */
+}
+.col-3 {
+  /* task (your code here) */
+}
+.col-2 {
+  /* task (your code here) */
+}
