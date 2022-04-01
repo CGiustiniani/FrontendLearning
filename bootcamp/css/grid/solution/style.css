@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Grid example */
+.example-container {
+  border: 3px solid lightcoral;
+  display: grid;
+  grid-template: 100px auto 100px / 30fr 70fr;
+  grid-template-areas:
+    'header     header'
+    'sidebar    main'
+    '.     footer';
+  gap: 10px;
+  height: 70vh;
+}
+
+.box {
+  background-color: lightcoral;
+}
+
+.box-1 {
+  grid-area: header;
+}
+.box-4 {
+  grid-area: footer;
+}
