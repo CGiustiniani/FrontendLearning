@@ -1,4 +1,4 @@
-##Cheat Sheet/Summary
+## Cheat Sheet/Summary
 
 **A cheat sheet of array methods:**
 
