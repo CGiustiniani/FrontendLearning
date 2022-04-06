@@ -344,7 +344,8 @@ console.log(months);
 // expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
-#Cheat Sheet/Summary
+##Cheat Sheet/Summary
+
 **A cheat sheet of array methods:**
 
 To add/remove elements:

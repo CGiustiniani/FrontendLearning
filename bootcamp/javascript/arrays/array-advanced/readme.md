@@ -1,4 +1,5 @@
-#Cheat Sheet/Summary
+##Cheat Sheet/Summary
+
 **A cheat sheet of array methods:**
 
 To add/remove elements:
