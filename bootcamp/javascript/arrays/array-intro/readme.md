@@ -348,7 +348,7 @@ console.log(months);
 
 **A cheat sheet of array methods:**
 
-To add/remove elements:
+### To add/remove elements:
 
 `push(...items)` – adds items to the end.
 
