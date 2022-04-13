@@ -1,0 +1,37 @@
+form {
+  background: grey;
+}
+
+form svg {
+  width: 250px;
+  height: 250px;
+}
+
+form input {
+  display: block;
+  width: 300px;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0')
+    format('woff2');
+}
+
+.send:before {
+  font-family: FontAwesome;
+  content: '\f064';
+}
+
+#header {
+  position: relative;
+  background: black;
+  padding: 5px;
+}
+
+#header.sticky {
+  position: sticky;
+  top: 0;
+}
