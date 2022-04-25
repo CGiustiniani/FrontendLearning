@@ -9,7 +9,3 @@
 let day = 'Monday';
 let temperature = 20;
 let weather = 'Rain';
-
-if ((day === 'Monday' || day === 'Tuesday') && temperature < 22 || weather === 'Rain') {
-    console.log('Close the window.');
-}

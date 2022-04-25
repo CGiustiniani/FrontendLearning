@@ -7,7 +7,3 @@
 //Write your code below
 let day = 'Monday';
 let temperature = 20;
-
-if (day === 'Monday' && temperature < 22) {
-    console.log('Close the window.');
-}
