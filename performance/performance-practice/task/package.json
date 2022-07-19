@@ -1,6 +1,7 @@
 {
-  "name": "js",
-  "version": "0.0.0",
+  "name": "performance-practice",
+  "version": "1.0.0",
   "private": true,
+  "main": "index.html",
   "dependencies": {}
 }
