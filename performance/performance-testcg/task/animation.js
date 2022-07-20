@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+/*window.addEventListener("DOMContentLoaded", (event) => {
   const square = document.querySelector(".square");
   let left = 0;
 
@@ -21,3 +21,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   animate();
 });
+*/

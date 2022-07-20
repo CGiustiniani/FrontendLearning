@@ -1,1 +1,1 @@
-localStorage.setItem("mytime", Date.now());
+//localStorage.setItem("mytime", Date.now());

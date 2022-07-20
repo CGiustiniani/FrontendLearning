@@ -1,4 +1,4 @@
-document.addEventListener("scroll", function () {
+/*document.addEventListener("scroll", function () {
   const header = document.querySelector("#header");
   if (header) {
     if (document.querySelector("body").scrollTop > 0) {
@@ -7,4 +7,4 @@ document.addEventListener("scroll", function () {
       header.classList.remove("sticky");
     }
   }
-});
+});*/
