@@ -35,11 +35,9 @@ const chartData = [
 // Hint: You can use font, textAlign, fillText
 
 
-
 // Create horizontal bars from the chartData
 // Hint: You can loop the array, use fillStyle, fillRect
 // To keep everything simple you can hardcode some parts
-
 
 
 // Optional: Place the movie title on top of the bars
