@@ -5,11 +5,11 @@ canvas.width = 400;
 canvas.height = 400;
 const ctx = canvas.getContext('2d');
 
-// Erase area
-// ctx.clearRect();
+// Create a filled rectangle
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// Create a filled rectangle ctx.fillRect()
-// ctx.fillRect();
+// Erase area
+ctx.clearRect(25, 25, canvas.width - 50, canvas.height - 50);
 
 // Add stroked Rectangle
-// ctx.strokeRect();
+ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);

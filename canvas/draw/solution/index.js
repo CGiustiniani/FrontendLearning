@@ -1,5 +1,4 @@
-// Import stylesheets
-import './style.css';
+
 
 const canvas = document.querySelector('#app');
 const ctx = canvas.getContext('2d');
