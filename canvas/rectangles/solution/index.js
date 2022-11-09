@@ -1,5 +1,4 @@
-// Import stylesheets
-import './style.css';
+
 const canvas = document.querySelector('#canvas');
 canvas.width = 400;
 canvas.height = 400;
