@@ -141,7 +141,8 @@ A label provides a statement with an identifier that lets you refer to it elsewh
 **Syntax**
 
 ```js
-markLoop: while (theMark === true) {
+markLoop: 
+while (theMark === true) {
   doSomething();
 }
 ```
