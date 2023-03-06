@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labeled</title>
+</head>
+<body>
+    <pre>
+        <code>
+            let str = '';
+
+            loop1:
+            for (let i = 0; i < 5; i++) {
+            if (i === 1) {
+                continue loop1;
+            }
+            str = str + i;
+            }
+
+            console.log(str);
+            // "0234"
+        </code>
+    </pre>
+
+    <pre>
+        <code>
+            let i, j;
+
+            loop1:
+            for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
+            loop2:
+            for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+                if (i === 1 && j === 1) {
+                    continue loop1;
+                }
+                console.log('i = ' + i + ', j = ' + j);
+            }
+            }
+
+            // Output is:
+            //   "i = 0, j = 0"
+            //   "i = 0, j = 1"
+            //   "i = 0, j = 2"
+            //   "i = 1, j = 0"
+            //   "i = 2, j = 0"
+            //   "i = 2, j = 1"
+            //   "i = 2, j = 2"
+            // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
+        </code>
+    </pre>
+
+    <div>----------------------------</div>
+    <p>Answers are in the console.</p>
+
+    <script src="labeled.js"></script>
+</body>
+</html>
