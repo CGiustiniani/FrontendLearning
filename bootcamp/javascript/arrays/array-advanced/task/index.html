@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced arrays task</title>
+</head>
+<body style="font-size: 18px";>
+<h2>Exercise 1: Sort array of objects by type and name, all ascending.</h2>
+<pre>
+    <code>
+// NOTE: Because type is missing for some objects, we need to add a default value, otherwise, it will not sort correctly.
+[
+    { name: 'Rijeka', postalCode: 51000, type: 3 },
+    { name: 'Varazdin', postalCode: 42000, type: 2 },
+    { name: 'Split', postalCode: 21000, type: 2 },
+    { name: 'Gospić', postalCode: 23000 },
+    { name: 'Zagreb', postalCode: 10000, type: 1 },
+    { name: 'Osijek', postalCode: 31000 }
+];
+expected output:
+[
+  { name: "Zagreb", postalCode: 10000, type: 1 },
+  { name: "Varazdin", postalCode: 42000, type: 2 },
+  { name: "Split", postalCode: 21000, type: 2 },
+  { name: "Rijeka", postalCode: 51000, type: 3 },
+  { name: "Osijek", postalCode: 31000 },
+  { name: "Gospić", postalCode: 23000 }
+]
+    </code>
+</pre>
+
+<h2>Exercise 2: Implement a difference function, which subtracts one list from another and returns the result.
+    It should remove all values from list a, which are present in list b keeping their order.
+</h2>
+<pre>
+    <code>
+arrayDiff([1, 2], [1])
+// Output: [2]
+    </code>
+    <code>
+arrayDiff([1, 2, 2, 2, 3], [2])
+// Output: [1,3]
+    </code>
+</pre>
+<h2>Exercise 3</h2>
+<pre>
+    <code>
+const data = [
+	{
+		id: 1, type: 'service', name: 'Service 1', active: true, memberId: 10
+	},
+	{
+		id: 2, type: 'service', name: 'Service 2', active: true, memberId: 11
+	},
+	{
+		id: 3, type: 'service', name: 'Service 3', active: false, memberId: 10
+	},
+	{
+		id: 4, type: 'service', name: 'Service 4', active: true, memberId: 9
+	},
+	{
+		id: 5, type: 'deal', name: 'Deal 1', active: false, services: [3, 4]
+	},
+	{
+		id: 6, type: 'deal', name: 'Deal 6', active: false, services: [4]
+	},
+	{
+		id: 7, type: 'deal', name: 'Deal 7', active: true, services: [1, 3, 4]
+	},
+	{
+		id: 8, type: 'member', name: 'Member 1', active: true
+	},
+	{
+		id: 9, type: 'member', name: 'Member 2', active: true
+	},
+	{
+		id: 10, type: 'member', name: 'Member 3', active: true
+	},
+	{
+		id: 11, type: 'member', name: 'Member 4', active: false
+	}
+]
+	</code>
+</pre>
+<div style="font-size: 23px;display: flex;flex-direction: column">
+	<span>With the provided data to the following tasks:</span>
+	<span>1. Get all active (active is true) data and output its names.</span>
+	<span>2. Output the name of the member who is working on Service 3.</span>
+	<span>3. Output the names of the deals for Member 3. member -> service -> deal.</span>
+	<span>4. Output service names that are not assigned to any deal.</span>
+	<span>5. Output the name of the member who is not active but is assigned to a service.</span>
+	<h3>Expected Result:</h3>
+	<pre>
+		<code>
+// 1. "Service 1, Service 2, Service 4, Deal 7, Member 1, Member 2, Member 3"
+// 2. "Member 3"
+// 3. "Deal 1, Deal 7"
+// 4. "Service 2"
+// 5. "Member 4"
+		</code>
+	</pre>
+</div>
+<script src="array.js"></script>
+</body>
+</html>

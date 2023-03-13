@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays solution</title>
+</head>
+<body style="font-size: 18px";>
+
+<h1>Find code solutions inside javascript files and check the outputs in console</h1>
+<h3>concat()</h3>
+<pre>
+    <code>
+    1. Write an example to get following result from `concat()`.
+
+    [1, [2, 3], "1", 5, false]
+    </code>
+</pre>
+<h3>every()</h3>
+<pre>
+    <code>
+    1. Provide a function to test if all elements are even and greater than 20.
+
+    [2, 50, 40, 6, 10, 20]
+    // expected output: false
+
+    [22, 40, 100, 98, 30]
+    // expected output: true
+    </code>
+</pre>
+<h3>filter()</h3>
+
+<pre>
+    <code>
+    1. Find all prime numbers in an array.
+
+    [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    // expected output: [2, 3, 5, 7, 11, 13]
+
+    2. Filter array items based on search criteria
+
+    const fruits = [
+    { name: 'Apple', quantity: 459 },
+    { name: 'Banana', quantity: 312 },
+    { name: 'Orange', quantity: 650 },
+    { name: 'Mango', quantity: 123 },
+    { name: 'Grapes', quantity: 412 },
+    { name: 'Blueberries', quantity: 1905 }
+    ];
+
+    // Search criteria
+    // ***************
+    // 1. name has letters 'ap'
+    // expected output: [{ name: 'Apple', quantity: 459 }, { name: 'Grapes', quantity: 412 }]
+
+    // 2. name has letter 'r' and quantity greater than 500
+    // expected output: [{ name: 'Orange', quantity: 650 }, { name: 'Blueberries', quantity: 1905 }]
+
+    </code>
+</pre>
+<h4>Filter solution fruits</h4>
+<div>
+    <label for="fruitSearch">Fruit search</label>
+    <input type="text" name="fruit" id="fruitSearch">
+    <div class="js-fruit-list"></div>
+</div>
+
+<script>
+    const arrayFilter2 = [
+        { name: 'Apple', quantity: 459 },
+        { name: 'Banana', quantity: 312 },
+        { name: 'Orange', quantity: 650 },
+        { name: 'Mango', quantity: 123 },
+        { name: 'Grapes', quantity: 412 },
+        { name: 'Blueberries', quantity: 1905 }
+    ];
+
+    renderFruitList(arrayFilter2);
+
+    document.querySelector('#fruitSearch').addEventListener('keyup', e => {
+        const value = e.target.value;
+        const newList = arrayFilter2.filter(fruit => fruit.name.startsWith(value));
+        renderFruitList(newList);
+    });
+
+    function renderFruitList(list) {
+        const fruitListElement = document.querySelector('.js-fruit-list');
+        let rendered = '';
+
+        list.forEach(fruit => {
+            rendered += `<div>${fruit.name} - ${fruit.quantity}</div>`;
+        });
+
+        fruitListElement.innerHTML = rendered;
+    }
+</script>
+
+<h3>find()</h3>
+<pre>
+    <code>
+    1. Find and object in an array by its name. Note: Use arrow function and destructuring.
+
+    [
+    { name: 'wood', quantity: 20 },
+    { name: 'paper', quantity: 40 },
+    { name: 'plastic', quantity: 5 }
+    ];
+
+    // expected output: { name: 'wood', quantity: 20 }
+
+    </code>
+</pre>
+<h3>findIndex()</h3>
+<pre>
+    <code>
+    1. Find index of a fruit "blueberries".
+
+    ['apple', 'banana', 'cantaloupe', 'blueberries', 'grapefruit'];
+    // expected output: 3
+
+    </code>
+</pre>
+<h3>forEach()</h3>
+<pre>
+    <code>
+    1. Show all images from the list on the page. Add button which on click hides random image (use visibility property).
+
+    let arrayForEach = [
+    { src: 'http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg', alt: 'image' },
+    { src: 'http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg', alt: 'image2' },
+    { src: 'http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg', alt: 'image3' }
+    ];
+
+    </code>
+</pre>
+<h3>map()</h3>
+<pre>
+    <code>
+    1. Map an array of numbers to an array of power 3 exponents.
+
+    [2, 4, 5, 7, 9]
+    // expected output: [8, 64, 125, 343, 729]
+
+    </code>
+</pre>
+<h3>reduce()</h3>
+<pre>
+    <code>
+    1. Sum all even numbers.
+
+    [5, 4, 66, 12, 33, 45, 90]
+    // expected output: 172
+
+    2. Bond arrays contained in an array of objects using the spread operator and initial value.
+
+    [
+    {
+    name: 'Junior',
+    employees: ['John', 'Doe', 'Jane', 'Doe']
+    },
+    {
+    name: 'Senior',
+    employees: ['Matija', 'Daniel', 'Mario', 'Mateja']
+    }
+    ]
+    let initial = ['Silvio'];
+    // expected output: ["Silvio", "John", "Doe", "Jane", "Doe", "Matija", "Daniel", "Mario", "Mateja"]
+    </code>
+</pre>
+<h3>slice()</h3>
+<pre>
+    <code>
+    1. Extract the last two elements in the sequence.
+
+    Note: Use negative index.
+
+    ['one', 'two', 'three', 'four', 'five', 'six']
+    // expected output: ["five", "six"]
+    </code>
+</pre>
+<h3>sort()</h3>
+<pre>
+    <code>
+    1. Sort array of objects by name, ascending.
+
+    [
+    { name: 'Zagreb', postalCode: 10000, type: 1 },
+    { name: 'Varazdin', postalCode: 42000, type: 2 },
+    { name: 'Split', postalCode: 21000, type: 2 },
+    { name: 'Rijeka', postalCode: 51000, type: 3 },
+    { name: 'Osijek', postalCode: 31000 },
+    { name: 'Zadar', postalCode: 23000 }
+    ];
+    // expected output:
+    // [
+    // { name: "Osijek", postalCode: 31000 }
+    // { name: "Rijeka", postalCode: 51000, type: 3 }
+    // { name: "Split", postalCode: 21000, type: 2 }
+    // { name: "Varazdin", postalCode: 42000, type: 2 }
+    // { name: "Zadar", postalCode: 23000 }
+    // { name: "Zagreb", postalCode: 10000, type: 1 }
+    // ]
+
+    2. Sort array of objects by postalCode, descending
+
+    [
+    { name: 'Zagreb', postalCode: 10000, type: 1 },
+    { name: 'Varazdin', postalCode: 42000, type: 2 },
+    { name: 'Split', postalCode: 21000, type: 2 },
+    { name: 'Rijeka', postalCode: 51000, type: 3 },
+    { name: 'Osijek', postalCode: 31000 },
+    { name: 'Zadar', postalCode: 23000 }
+    ];
+    // expected output:
+    // [
+    // {name: "Rijeka", postalCode: 51000, type: 3}
+    // {name: "Varazdin", postalCode: 42000, type: 2}
+    // {name: "Osijek", postalCode: 31000}
+    // {name: "Zadar", postalCode: 23000}
+    // {name: "Split", postalCode: 21000, type: 2}
+    // {name: "Zagreb", postalCode: 10000, type: 1
+    // ]
+
+    3. Sort array of objects by type and name, all ascending
+
+    // NOTE: Because type is missing for some objects, we need to add a default value, otherwise, it will not sort
+    correctly.
+    [
+    { name: 'Zagreb', postalCode: 10000, type: 1 },
+    { name: 'Varazdin', postalCode: 42000, type: 2 },
+    { name: 'Split', postalCode: 21000, type: 2 },
+    { name: 'Rijeka', postalCode: 51000, type: 3 },
+    { name: 'Osijek', postalCode: 31000 },
+    { name: 'Zadar', postalCode: 23000 }
+    ];
+    // expected output:
+    // [
+    // { name: "Zagreb", postalCode: 10000, type: 1 }
+    // { name: "Split", postalCode: 21000, type: 2 }
+    // { name: "Varazdin", postalCode: 42000, type: 2 }
+    // { name: "Rijeka", postalCode: 51000, type: 3 }
+    // { name: "Osijek", postalCode: 31000 }
+    // { name: "Zadar", postalCode: 23000 }
+    // ]
+    </code>
+</pre>
+<h3>splice()</h3>
+<pre>
+    <code>
+    1. Remove zero elements from index 1 and insert "banana" and "orange".
+
+    let fruits = ['apple', 'cherry', 'mango', 'blueberry']
+    // expected output of fruits: ["apple", "banana", "orange", "cherry", "mango", "blueberry"]
+
+    2. Remove 2 elements from index 0 and insert "avocado".
+
+    let fruits2 = ['apple', 'banana', 'orange', 'cherry', 'mango', 'blueberry']
+    // expected output of fruits: ["avocado", "orange", "cherry", "mango", "blueberry"]
+    </code>
+</pre>
+<!--add multiple scripts for multiple methods in arrays-->
+<script src="basic.js"></script>
+<script src="methods-one.js"></script>
+<script src="methods-two.js"></script>
+<script src="methods-three.js"></script>
+</body>
+</html>
