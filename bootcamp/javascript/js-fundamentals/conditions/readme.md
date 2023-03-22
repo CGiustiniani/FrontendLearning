@@ -36,7 +36,7 @@ Operators we might use in a conditional expression are:
 
 ***Note: => is not an operator, but the notation for Arrow functions.***
 
-*[Example](/example/01-operators.md)
+*[Example](https://raw.githubusercontent.com/CGiustiniani/FrontendLearning/feature/js-conditional_code/bootcamp/javascript/js-fundamentals/conditions/example/01-operators.md)
 
 ## Truthy and Falsy
 
