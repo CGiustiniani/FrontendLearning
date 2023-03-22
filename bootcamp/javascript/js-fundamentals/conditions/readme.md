@@ -32,7 +32,8 @@ Operators we might use in a conditional expression are:
 | Greater than (>) | Returns true if the left operand is greater than the right operand. |
 | Greater than or equal (>=) | Returns true if the left operand is greater than or equal to the right operand. |
 | Less than (<)	| Returns true if the left operand is less than the right operand. |
-| Less than or equal (<=) | Returns true if the left operand is less than or equal to the right operand. |<br>
+| Less than or equal (<=) | Returns true if the left operand is less than or equal to the right operand. |
+
 
 ***Note: => is not an operator, but the notation for Arrow functions.***
 
