@@ -11,8 +11,8 @@ In computer science, a Boolean is a logical data type that can have only the val
 
 Examples of conditions:
 
-- Is the numeric value of variable ``A`` greater than the numeric value of variable B?
-- Is the length of string A equal to the length of string B?
+- Is the numeric value of variable ``A`` greater than the numeric value of variable ``B``?
+- Is the length of string ``A`` equal to the length of string ``B``?
 - Is the date greater than yesterday's date or any given date?
 - Did something happen in previous code execution?
 - Did we iterate the desired amount of times over a code block?
@@ -113,8 +113,8 @@ if (choice === 'sunny') {
 
 If you want to test multiple conditions without writing nested if...else statements, logical operators can help you. When used in conditions, the first two do the following:
 
-- && — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to true for the whole expression to return true.
-- || — OR; allows you to chain together two or more expressions so that one or more of them have to individually evaluate to true for the whole expression to return true.
+- ``&&`` — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to true for the whole expression to return true.
+- ``||`` — OR; allows you to chain together two or more expressions so that one or more of them have to individually evaluate to true for the whole expression to return true.
 
 *Example: Logical operators* 
 
