@@ -1,5 +1,7 @@
 # Conditional Code Execution
 
+*[Example](/task/example/example.md)
+
 ## Prerequisites:
 
 - Booleans, Boolean algebra
