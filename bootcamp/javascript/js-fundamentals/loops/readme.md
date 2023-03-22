@@ -2,7 +2,7 @@
 
 Looping, for any programming language, is a powerful tool in order to execute a set of instructions, repeatedly, while the expression passed is satisfied. A very basic example can be, to print “Hello World” for 10 times.
 
-![Hello world 10 times](https://github.com/CGiustiniani/FrontendLearning/blob/feature/js-loops/bootcamp/javascript/js-fundamentals/loops/bs-hello-world.png)
+![Hello world 10 times](https://raw.githubusercontent.com/CGiustiniani/FrontendLearning/feature/js-loops/bootcamp/javascript/js-fundamentals/loops/bs-hello-world.png)
 
 There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. (Note that it's possible that number could be zero!)
 
