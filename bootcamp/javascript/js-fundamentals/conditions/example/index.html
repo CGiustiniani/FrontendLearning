@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions- Example</title>
+</head>
+<body>
+    <h2>Operators</h2>
+
+    <h3>Equal</h3> 
+    <pre>
+        <code>
+            const a = 3;
+            const b = '3';
+
+            console.log(a == b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Not equal</h3>
+    <pre>
+        <code>
+            const a = 1;
+            const b = 2;
+
+            console.log(a != b);
+            // true
+        </code>
+    </pre>
+    <pre>
+        <code>
+            const c = 3;
+            const d = 3;
+
+            console.log(a != b);
+            // false
+        </code>
+    </pre>
+
+    <h3>Strict equal</h3>
+    <pre>
+        <code>
+            const a = 3;
+            const b = '3';
+
+            console.log(a === b);
+            // false
+        </code>
+    </pre>
+    <pre>
+        <code>
+            const a = 3;
+            const b = 3;
+
+            console.log(a === b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Strict not equal</h3>
+    <pre>
+        <code>
+            const a = 3;
+            const b = 3;
+
+            console.log(a !== b);
+            // false
+        </code>
+    </pre>
+    <pre>
+        <code>
+            const a = 3;
+            const b = '3';
+
+            console.log(a !== b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Greater than (>)</h3>
+    <pre>
+        <code>
+            const a = 3;
+            const b = 1;
+
+            console.log(a > b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Greater than or equal (>=)</h3>
+    <pre>
+        <code>
+            const a = 2;
+            const b = 2;
+
+            console.log(a >= b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Less than (<)</h3>
+    <pre>
+        <code>
+            const a = 1;
+            const b = 2;
+
+            console.log(a < b);
+            // true
+        </code>
+    </pre>
+
+    <h3>Less than or equal (<=)</h3>
+    <pre>
+        <code>
+            const a = 3;
+            const b = 1;
+
+            console.log(a <= b);
+            // false
+        </code>
+    </pre>
+
+
+    <h2>Truthy or Falsy</h2>
+
+    <h3>Truthy</h3>
+    <pre>
+        <code>
+            console.log(true);
+            console.log(!! []);
+            console.log(!! {});
+            console.log(!! 42);
+            console.log(!! "0");
+            console.log(!! "false");
+            console.log(!! new Date());
+            console.log(!! -42);
+            console.log(!! 12n);
+            console.log(!! 3.14);
+            console.log(!! -3.14);
+            console.log(!! Infinity);
+            console.log(!! -Infinity);
+        </code>
+    </pre>
+
+    <h3>Falsy</h3>
+    <pre>
+        <code>
+            console.log(false);
+            console.log(!! null);
+            console.log(!! undefined);
+            console.log(!! 0);
+            console.log(!! -0);
+            console.log(!! 0n);
+            console.log(!! NaN);
+            console.log(!! "");
+        </code>
+    </pre>
+
+
+    <h2>Logical Operators</h2>
+
+    <h3>AND</h3>
+    <pre>
+        <code>
+            if (choice === 'sunny' && temperature < 86) {
+                para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+            } else if (choice === 'sunny' && temperature >= 86) {
+                para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+            }
+        </code>
+    </pre>
+
+    <h3>OR</h3>
+    <pre>
+        <code>
+            if (iceCreamVanOutside || houseStatus === 'on fire') {
+                console.log('You should leave the house quickly.');
+            } else {
+                console.log('Probably should just stay in then.');
+            }
+        </code>
+    </pre>
+
+    <h3>NOT (NOR)</h3>
+    <pre>
+        <code>
+            if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
+            console.log('Probably should just stay in then.');
+            } else {
+            console.log('You should leave the house quickly.');
+            }
+        </code>
+    </pre>
+
+
+    <h2>Boolean Algebra</h2>
+
+    <h3>AND</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A AND B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (A && B) { ... }
+        </code>
+    </pre>
+
+    <h3>OR</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A OR B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (A || B) { ... }
+        </code>
+    </pre>
+
+    <h3>NOT</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>NOT A</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (!A) { ... }
+        </code>
+    </pre>
+
+    <h3>XOR - (if diffferent)</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A XOR B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (A !== B) { ... }
+        </code>
+    </pre>
+
+    <h3>NOR - (If both are 0)</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A NOR B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (!(A || B)) { ... }
+        </code>
+    </pre>
+
+    <h3>XNOR - (If both are same)</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A XNOR B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (A === B) { ... }
+        </code>
+    </pre>
+
+    <h3>NAND - (If any is 0)</h3>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A NAND B</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>0</th>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>0</th>
+        </tr>
+    </table>
+
+    <pre>
+        <code>
+            if (!(A && B)) { ... }
+        </code>
+    </pre>
+
+    <script src="example.js"></script>
+</body>
+</html>
