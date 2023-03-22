@@ -6,7 +6,7 @@
 - Strings: length
 
 ## Recap of prerequisites
-### Booleans
+## Booleans
 In computer science, a Boolean is a logical data type that can have only the values true or false. For example, in JavaScript, Boolean conditionals are often used to decide which sections of code to execute (such as in if statements) or repeat (such as in for loops).
 
 Examples of conditions:
@@ -36,13 +36,13 @@ Operators we might use in a conditional expression are:
 
 ***Note: => is not an operator, but the notation for Arrow functions.***
 
-*[Example](https://raw.githubusercontent.com/CGiustiniani/FrontendLearning/feature/js-conditional_code/bootcamp/javascript/js-fundamentals/conditions/example/01-operators.md)
+*Example: Operators*
 
 ## Truthy and Falsy
 
 n JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN)
 
-*[Example](/example/02-truthy-falsy.md)
+*Example: Truthy or falsy*
 
 ---
 
@@ -116,11 +116,11 @@ If you want to test multiple conditions without writing nested if...else stateme
 - ==&&== — AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to true for the whole expression to return true.
 - ==||== — OR; allows you to chain together two or more expressions so that one or more of them have to individually evaluate to true for the whole expression to return true.
 
-*[Example](/example/03-logical-operators.md)
+*Example: Logical operators* 
 
 ***Boolean algebra***
 In mathematics and mathematical logic, Boolean algebra is the branch of algebra in which the values of the variables are the truth values true and false, usually denoted 1 and 0, respectively.
-*[Example](/example/04-boolean-algebra.md)
+*Example: Boolean algebra*
 *[Boolean algebra Simplifier](https://www.boolean-algebra.com/)
 
 ***Grouping and short-circuiting***
