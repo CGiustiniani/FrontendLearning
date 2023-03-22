@@ -8,7 +8,9 @@ There are many different kinds of loops, but they all essentially do the same th
 
 The various loop mechanisms offer different ways to determine the start and end points of the loop. There are various situations that are more easily served by one type of loop over the others.
 
-## <span style="color: blue">for</span>
+---
+
+## for
 
 A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop.
 
@@ -27,13 +29,14 @@ for (let i = 0; i < 10; i++) {
 
 When a for loop executes, the following occurs:
 
-1. The initializing expression initialExpression, if any, is executed. This expression usually initializes one or more loopcounters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
-2. The conditionExpression expression is evaluated. If the value of conditionExpression is true, the loop statementsexecute. If the value of conditionExpression is false, the for loop terminates. (If the condition expression is omittedentirely, the conditionExpression is assumed to be true.)
-3. The statement executes. To execute multiple statements, use a block statement ({ ... }) to group those statements.
-4. If present, the update expression incrementExpression is executed.
+1. The initializing expression ``initialExpression``, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+2. The ``conditionExpression`` expression is evaluated. If the value of ``conditionExpression`` is true, the loop statementsexecute. If the value of ``conditionExpression`` is false, the for loop terminates. (If the condition expression is omittedentirely, the ``conditionExpression`` is assumed to be true.)
+3. The statement executes. To execute multiple statements, use a block statement ``({ ... })`` to group those statements.
+4. If present, the update expression ``incrementExpression`` is executed.
 5. Control returns to Step 2.
+---
 
-## <span style="color: blue">do.</span>..while
+## do...while
 
 The do...while statement creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.
 
@@ -69,8 +72,9 @@ do {
 console.log(result);
 // "6"
 ```
+---
 
-## <span style="color: blue">while<span>
+## while
 
 A while statement executes its statements as long as a specified condition evaluates to true.
 
@@ -96,8 +100,9 @@ while (true) {
   console.log("Hello, world!");
 }
 ```
+---
 
-## <span style="color: blue">break</span>
+## break
 
 Use the break statement to terminate a loop, switch, or in conjunction with a labeled statement.
 
@@ -108,10 +113,11 @@ Use the break statement to terminate a loop, switch, or in conjunction with a la
 break;
 break [label];
 ```
+---
 
-## <span style="color: blue">continue</span>
+## continue
 
-The `continue` statement can be used to restart a `while`, `do-while`, `for`, or `label statement`.
+The ``continue`` statement can be used to restart a ``while``, ``do-while``, ``for``, or ``label statement``.
 
 - When you use continue without a label, it terminates the current iteration of the innermost enclosing while, do-while, or for statement and continues execution of the loop with the next iteration. In contrast to the break statement, continue does not terminate the execution of the loop entirely. In a while loop, it jumps back to the condition. In a for loop, it jumps to the increment-expression.
 - When you use continue with a label, it applies to the looping statement identified with that label.
@@ -133,8 +139,9 @@ while (i < 5) {
 }
 // 1, 2, 4, 5
 ```
+---
 
-## <span style="color: blue">labeled</span>
+## labeled
 
 A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.
 
@@ -146,8 +153,9 @@ while (theMark === true) {
   doSomething();
 }
 ```
+---
 
-## <span style="color: blue">for...in</span>
+## for...in
 
 The for...in statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements.
 
@@ -175,7 +183,9 @@ Arrays Although it may be tempting to use this as a way to iterate over Array el
 
 Therefore, it is better to use a traditional for loop with a numeric index when iterating over arrays, because the for...in statement iterates over user-defined properties in addition to the array elements, if you modify the Array object (such as adding custom properties or methods).
 
-## <span style="color: blue">for...of</span>
+---
+
+## for...of
 
 The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
 
@@ -198,6 +208,7 @@ for (const element of array) {
 // "b"
 // "c"
 ```
+---
 
 ## Difference between for...of and for...in
 
