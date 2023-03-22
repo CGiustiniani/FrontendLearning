@@ -34,7 +34,6 @@ Operators we might use in a conditional expression are:
 | Less than (<)	| Returns true if the left operand is less than the right operand. |
 | Less than or equal (<=) | Returns true if the left operand is less than or equal to the right operand. |
 
-
 ***Note: => is not an operator, but the notation for Arrow functions.***
 
 *[Example](/example/01-operators.md)
