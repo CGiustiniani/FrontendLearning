@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in vs for of</title>
+</head>
+<body>
+    <p>The following example shows the difference between a for...of loop and a for...in loop when used with an Array.</p>
+
+    <pre>
+        <code>
+            Object.prototype.objCustom = function() {};
+            Array.prototype.arrCustom = function() {};
+
+            const iterable = [3, 5, 7];
+            iterable.foo = 'hello';
+
+            for (const i in iterable) {
+                console.log(i); // logs "0", "1", "2", "foo", "arrCustom", "objCustom"
+            }
+
+            for (const i in iterable) {
+                if (iterable.hasOwnProperty(i)) {
+                    console.log(i); // logs "0", "1", "2", "foo"
+                }
+            }
+
+            for (const i of iterable) {
+                console.log(i); // logs 3, 5, 7
+            }
+        </code>
+    </pre>
+
+    <div>----------------------------------------</div>
+    <p>Answers are in the console.</p>
+
+    <script src="for-in.js"></script>
+</body>
+</html>
