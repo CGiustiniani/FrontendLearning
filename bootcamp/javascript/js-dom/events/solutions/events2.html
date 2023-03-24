@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blank HTML</title>
+</head>
+<body>
+<label for="textinput">Text:</label>
+<input type="text" id="textinput">
+
+<script>
+  const inputElement = document.getElementById('textinput');
+  inputElement.addEventListener('keyup', (e) => console.log(e.target.value));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blank HTML</title>
+</head>
+<body>
+<button>Count + 1 on click</button>
+<span class="js-counter">0</span>
+
+<script>
+	const btn = document.querySelector('button');
+  let count = 0;
+
+  function updateCounter() {
+  	count++;
+  	const counterElement = document.getElementsByClassName('js-counter')[0];
+  	counterElement.textContent = count.toString();
+  }
+
+	btn.addEventListener('click', updateCounter);
+</script>
+</body>
+</html>
