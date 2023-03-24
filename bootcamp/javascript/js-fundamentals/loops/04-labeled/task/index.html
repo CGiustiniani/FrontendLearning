@@ -7,6 +7,7 @@
     <title>labeled</title>
 </head>
 <body>
+    <p>Answers are in the console.</p>
     <pre>
         <code>
             let str = '';
@@ -20,9 +21,9 @@
             }
 
             console.log(str);
-            // "0234"
         </code>
     </pre>
+    <hr>
 
     <pre>
         <code>
@@ -36,17 +37,9 @@
                     continue loop1;
                 }
                 console.log('i = ' + i + ', j = ' + j);
-            }
+                }
             }
 
-            // Output is:
-            //   "i = 0, j = 0"
-            //   "i = 0, j = 1"
-            //   "i = 0, j = 2"
-            //   "i = 1, j = 0"
-            //   "i = 2, j = 0"
-            //   "i = 2, j = 1"
-            //   "i = 2, j = 2"
             // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
         </code>
     </pre>
