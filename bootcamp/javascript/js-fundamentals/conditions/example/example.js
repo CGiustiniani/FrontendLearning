@@ -43,7 +43,7 @@ console.log(value6 >= value7);
 console.log('Less than (<)');
 const value8 = 1;
 const value9 = 2;
-consolee.log(value8 < value9);
+console.log(value8 < value9);
 
 console.log('Less than or equal (<=)');
 const value10 = 3;
@@ -79,9 +79,9 @@ console.log('Logical operators = AND');
 const choice = 'sunny';
 const temperature = 72;
 if (choice === 'sunny' && temperature < 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+    console.log('It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.');
 } else if (choice === 'sunny' && temperature >= 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+    console.log('It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.');
 }
 
 console.log('Logical operators - OR');
