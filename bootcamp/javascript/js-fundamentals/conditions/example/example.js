@@ -70,7 +70,6 @@ console.log(!! null);
 console.log(!! undefined);
 console.log(!! 0);
 console.log(!! -0);
-console.log(!! 0n);
 console.log(!! NaN);
 console.log(!! "");
 
