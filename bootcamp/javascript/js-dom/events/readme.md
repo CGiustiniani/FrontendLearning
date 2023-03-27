@@ -115,7 +115,7 @@ The standard DOM Events describes 3 phases of event propagation:
 2. Target phase – the event reached the target element.
 3. Bubbling phase – the event bubbles up from the element.
 
-![Event dispatch in a DOM tree](./assets/eventflow.svg "Graphical representation of an event dispatched in a DOM tree using the DOM event flow")
+![Event dispatch in a DOM tree](https://raw.githubusercontent.com/CGiustiniani/Frontendlearning/js-dom/bootcamp/bootcamp/javascript/js-dom/events/assets/eventflow.svg "Graphical representation of an event dispatched in a DOM tree using the DOM event flow")
 <br>
 *Source: [W3](https://www.w3.org/TR/DOM-Level-3-Events/)*
 

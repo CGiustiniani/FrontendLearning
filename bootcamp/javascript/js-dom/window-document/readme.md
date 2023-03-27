@@ -12,7 +12,7 @@ A global variable, `window`, representing the window in which the script is runn
 
 When you create a script–whether it's inline in a `<script>` element or included in the web page by means of a script loading instruction–you can immediately begin using the API for the `document` or `window` elements to manipulate the document itself or to get at the children of that document, which are the various elements in the web page.
 
-**NOTE:** Provide html template for next exercises. (./assets/blank.html).
+**NOTE:** Provide html template for next exercises. (https://raw.githubusercontent.com/CGiustiniani/Frontendlearning/feature/js-dom/bootcamp/javascript/js-dom/window-document/assets/blank.html).
 
 This following JavaScript will display an alert when the document is loaded (and when the whole DOM is available for use):
 
@@ -49,6 +49,13 @@ This function creates a new H1 element, adds text to that element, and then adds
 ```
 
 ## Fundamental data types
+
+| Data type (Interface) | Description |
+| --------------------- | ----------- |
+| Document | When a member returns an object of type document, this object is the root document object itself. |
+| Node | Every object located within a document is a node of some kind. In an HTML document, an object can be an element node but also a text node or attribute node. |
+
+
 
 The following table briefly describes important data types.
 <table>

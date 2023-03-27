@@ -1,15 +1,17 @@
 # Intro to DOM
 
-The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. 
+The **Document Object Model (DOM)** is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. 
 
 The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.
 
 <br/>
 
-![DOM hierarchy in an HTML document](./assets/dom-model.png "CSS Syntax Declaration")
+![DOM hierarchy in an HTML document](https://raw.githubusercontent.com/CGiustiniani/Frontendlearning/feature/js-dom/bootcamp/javascript/js-dom/intro/assets/dom-model.png "CSS Syntax Declaration")
 <br>
 *Source: [Wikipedia](https://en.wikipedia.org/wiki/Document_Object_Model)*
 
+---
+<br>
 The [W3C DOM](https://www.w3.org/DOM/) and [WHATWG DOM](https://dom.spec.whatwg.org/) standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.
 
 For example, the standard DOM specifies that the `querySelectorAll` method in the code below must return a list of all the `<p>` elements in the document:
