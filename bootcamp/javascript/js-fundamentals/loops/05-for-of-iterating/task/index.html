@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+<body>
+    <h2>Exercise 1 - Iterating over an Array</h2>
+    <p>Print each value to the console.</p>
+
+    <pre>
+        <code>
+            const iterable = [10, 20, 30];
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 2 - Iterating over a String</h2>
+    <p>Print an every character of a string to console.</p>
+
+    <pre>
+        <code>
+            const iterable = 'boo';
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 3 - Iterating over a Map</h2>
+    <p>Print every entry and of the Map, and each value of an entry.</p>
+
+    <pre>
+        <code>
+            const iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 4 - Iterating over a Set</h2>
+    <p>Print each value of Set</p>
+
+    <pre>
+        <code>
+            const iterable = new Set([1, 1, 2, 2, 3, 3]);
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 5 - Iterating over DOM collection</h2>
+    <p>Iterating over DOM collections like NodeList: the following example adds a read class to paragraphs that are direct descendants of an article</p>
+
+    <pre>
+        <code>
+            // Note: This will only work in platforms that have
+            // implemented NodeList.prototype[Symbol.iterator]
+
+            const articleParagraphs = document.querySelectorAll('article > p');
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 6 - Closing iterators</h2>
+    <p>In for...of loops, abrupt iteration termination can be caused by break, throw or return. In these cases, the iterator is closed.</p>
+    <p>Print the value of function foo(), but break it after the first value.</p>
+
+    <pre>
+        <code>
+            function* foo(){
+                yield 1;
+                yield 2;
+                yield 3;
+            };
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Exercise 7 - Iterating over generators</h2>
+    <p>You can also iterate over generators, i.e. functions generating an iterable object.</p>
+    <p>Print the Fibonacci numbers to the console, but break a sequence after 1000th number.</p>
+
+    <script src="for-of.js"></script>
+</body>
+</html>
