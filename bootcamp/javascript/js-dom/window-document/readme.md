@@ -50,15 +50,8 @@ This function creates a new H1 element, adds text to that element, and then adds
 
 ## Fundamental data types
 
-| Data type (Interface) | Description |
-| --------------------- | ----------- |
-| Document | When a member returns an object of type document, this object is the root document object itself. |
-| Node | Every object located within a document is a node of some kind. In an HTML document, an object can be an element node but also a text node or attribute node. |
-
-
-
 The following table briefly describes important data types.
-<table style="word-break: normal">
+<table>
 <thead>
 <tr>
 <th>Data type (Interface)</th>
