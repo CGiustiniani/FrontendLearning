@@ -6,16 +6,16 @@ console.log(a == b);
 console.log('Operators-not equal');
 const c = 1;
 const d = 2;
-console.log(c != d);
+console.log(c !== d);
 
 const e = 3;
 const f = 3;
-console.log(e != f);
+console.log(e !== f);
 
 console.log('Operators - strict equal');
 const g = 3;
 const h = '3';
-console.log(a === b);
+console.log(g === h);
 
 const i = 3;
 const j = 3;
@@ -59,7 +59,6 @@ console.log(!! "0");
 console.log(!! "false");
 console.log(!! new Date());
 console.log(!! -42);
-console.log(!! 12n);
 console.log(!! 3.14);
 console.log(!! -3.14);
 console.log(!! Infinity);
