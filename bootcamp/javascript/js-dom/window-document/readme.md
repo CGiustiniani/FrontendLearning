@@ -58,7 +58,7 @@ This function creates a new H1 element, adds text to that element, and then adds
 
 
 The following table briefly describes important data types.
-<table>
+<table style="word-break: normal">
 <thead>
 <tr>
 <th>Data type (Interface)</th>
