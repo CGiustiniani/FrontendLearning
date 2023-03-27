@@ -40,7 +40,7 @@ Operators we might use in a conditional expression are:
 
 ## Truthy and Falsy
 
-n JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN)
+In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN)
 
 *Example: Truthy or falsy*
 
