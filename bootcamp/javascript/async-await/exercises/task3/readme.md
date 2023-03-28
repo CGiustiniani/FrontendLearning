@@ -4,7 +4,7 @@ Explore https://restcountries.eu/ site. There we have our API for this exercise.
 
 Extra assignments:
 
-- Select a country from the dropdown and list the following data about the chosen one:
+Select a country from the dropdown and list the following data about the chosen one:
     
    - Flag (image)
       
