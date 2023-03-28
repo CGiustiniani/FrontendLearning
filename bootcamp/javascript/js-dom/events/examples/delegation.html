@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blank HTML</title>
+</head>
+<body>
+<ul id="js-parent-list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
+</ul>
+
+<script>
+	document.getElementById("js-parent-list").addEventListener("click", function (e) {
+		if (e.target && e.target.nodeName == "LI") {
+			console.log(e.target.innerText);
+		}
+	});
+</script>
+</body>
+</html>

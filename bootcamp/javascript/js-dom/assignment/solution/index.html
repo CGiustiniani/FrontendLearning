@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+      }
+
+      .todo__wrapper {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .todo__label {
+          font-size: 2rem;
+          margin-bottom: 16px;
+      }
+
+      .todo__input {
+          margin-bottom: 16px;
+          padding: 8px;
+      }
+
+      .todo__submit {
+          border: none;
+          outline: 0;
+          padding: 12px;
+          font-size: 16px;
+      }
+
+      .todo__container {
+          list-style: none;
+          padding: 0;
+      }
+
+      .todo__item {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid lightgrey;
+          font-size: 20px;
+          padding: 6px 0;
+      }
+
+      .todo__remove {
+          color: red;
+          cursor: pointer;
+      }
+
+  </style>
+</head>
+<body>
+<div class="todo__wrapper">
+  <label class="todo__label" for="todoField">Todo</label>
+  <input class="todo__input" type="text" id="todoField">
+  <input class="todo__submit js-todoSubmit" type="submit" value="Submit">
+  <ul class="todo__container js-todosContainer">
+  </ul>
+</div>
+<script>
+	const todoSubmit = document.querySelector('.js-todoSubmit');
+	const todoField = document.querySelector('#todoField');
+	const todosContainer = document.querySelector('.js-todosContainer');
+	const todoCheckButton = document.querySelector('.js-checkItem');
+
+	todoSubmit.addEventListener('click', todoClickHandler);
+	document.addEventListener('click', todoCheckClickHandler);
+
+	function todoClickHandler () {
+		const todoText = todoField.value;
+		if (!todoText) {
+			alert("Input field can't be empty!");
+			return;
+    }
+		createTodoItem(todoText);
+	}
+
+	function createTodoItem(todoText) {
+		const listItem = document.createElement('li');
+		listItem.classList.add('todo__item');
+		const itemText = document.createTextNode(todoText);
+		listItem.appendChild(itemText);
+		const checkButton = document.createElement('span');
+		const checkText = document.createTextNode('X');
+		checkButton.appendChild(checkText);
+		checkButton.classList.add('js-checkItem');
+		checkButton.classList.add('todo__remove');
+		listItem.appendChild(checkButton);
+		todosContainer.appendChild(listItem);
+		todoField.value = '';
+		todoField.focus();
+  }
+
+	function todoCheckClickHandler (event) {
+		const target = event.target;
+		if (target.classList.contains('js-checkItem')) {
+			if (confirm('Are you sure?')) {
+				target.parentElement.remove();
+			}
+		}
+	}
+
+</script>
+</body>
+</html>
