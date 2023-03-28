@@ -1,19 +1,9 @@
 # Todo app
 
-<table>
-  <tr>
-    <th style="text-align: left">As a</th>
-    <td>website editor</td>
-  </tr>
-  <tr>
-    <th style="text-align: left">I want to</th>
-    <td>create my list of tasks</td>
-  </tr>
-<tr>
-    <th style="text-align: left">so that</th>
-    <td>I dont forget what I have to do</td>
-  </tr>
-</table>
+
+**As a** website editor \
+**I want to** create my list of tasks \
+**so that** I dont forget what I have to do
 
 **Acceptance Criteria**
 
