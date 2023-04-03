@@ -20,7 +20,7 @@ let blob = response.blob();
 ```
 There are two main types of asynchronous code style you'll come across in JavaScript code, old-style callbacks and newer promise-style code. In the below sections we'll review each of these in turn.
 
-### Async callbacks
+## Async callbacks
 
 Async callbacks are functions that are specified as arguments when calling a function which will start executing code in the background. When the background code finishes running, it calls the callback function to let you know the work is done, or to let you know that something of interest has happened. Using callbacks is slightly old-fashioned now, but you'll still see them in use in a number of older-but-still-commonly-used APIs.
 
@@ -52,7 +52,7 @@ loadAsset('https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Cat
 ```
 *Exercise 1*
 
-### Promise
+## Promise
 
 The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
@@ -83,7 +83,7 @@ myPromise
 *Example 2*
 *Example 3*
 
-*** Promise.all() ***
+**Promise.all()**
 
 The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. This returned promise will resolve when all of the input's promises have resolved, or if the input iterable contains no promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.
 
