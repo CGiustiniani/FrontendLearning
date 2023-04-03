@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS - Promise</title>
+</head>
+<body>
+    <h2>Promise</h2>
+
+    <p>Write promise that will output success message after 500ms.</p>
+
+    <pre>
+        <code>
+            const myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Success');
+                }, 500);
+            });
+
+myPromise.then(msg => console.log(msg));
+        </code>
+    </pre>
+
+    <script src="promise.js"></script>
+</body>
+</html>
