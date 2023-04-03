@@ -50,7 +50,7 @@ function displayImage(blob) {
 
 loadAsset('https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Category_Header_Image_Mountain_All_Mountain_1.jpg', 'blob', displayImage);
 ```
-[Exercise 1] (./exercises/01)
+*Exercise 1*
 
 ### Promise
 
@@ -80,8 +80,8 @@ myPromise
 .catch(err => { console.log(err) })
 .finally(value => {console.log('finally')});
 ```
-[Example 2] (./exercises/02)
-[Example 3] (./exercises/03)
+*Example 2*
+*Example 3*
 
 *** Promise.all() ***
 
@@ -117,4 +117,4 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   console.log('Fetch problem: ' + err.message);
 });
 ```
-[Exercise 4] (./exercises/04)
+*Exercise 4*
