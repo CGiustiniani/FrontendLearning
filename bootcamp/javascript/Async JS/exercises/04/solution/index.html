@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h2>Get Users</h2>
+
+    <p>Get users from 
+        <a href="https://jsonplaceholder.typicode.com/users">https://jsonplaceholder.typicode.com/users</a> and after that get all posts from the user Ervin Howell. To get posts use this url with correct userId: 
+        <a href="https://jsonplaceholder.typicode.com/posts?userId=xx">https://jsonplaceholder.typicode.com/posts?userId=xx</a></p>
+    
+    <pre>
+        <code>
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(data => data.find(user => user.name === 'Ervin Howell'))
+            .then(user =>
+                fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
+                .then(response => response.json())
+                .then(posts => console.log(posts))
+            );
+        </code>
+    </pre>
+
+    <script src="get_post.js"></script>
+</body>
+</html>
