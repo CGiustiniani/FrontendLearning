@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS - Output</title>
+</head>
+<body>
+    <h2>Output</h2>
+
+    <p>What is the output?</p>
+
+    <pre>
+        <code>
+            const myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve();
+                }, 300);
+            });
+
+            myPromise
+            .then(() => {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve('1');
+                    }, 300);
+                });
+                console.log('2');
+            })
+            .then(data => console.log(data))
+            .then(() => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve('3');
+                    }, 500);
+                    setTimeout(() => {
+                        reject('4');
+                    }, 300);
+                });
+            })
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
+            .finally(() => console.log('5'));
+        </code>
+    </pre>
+
+    <p>Check the output/answer in the console.</p>
+
+    <script src="output.js"></script>
+</body>
+</html>

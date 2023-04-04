@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS - Fetch</title>
+</head>
+<body>
+    <h2>Fetch data</h2>
+
+    <p>Fetch data using XMLHttpRequest from <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> todos with type <b>json</b>.</p>
+    <ul>
+        <li>One callback should return first 5 todos.</li>
+        <li>Second callback should return title of the first todo.</li>
+    </ul> 
+    
+    <pre>
+        <code>
+            function loadTodos (url, type, callback) {
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', url);
+                xhr.responseType = type;
+
+                xhr.onload = function () {
+                    callback(xhr.response);
+                };
+
+                xhr.send();
+            }
+
+            function showFiveTodos (data) {
+                console.log(data.slice(0, 5));
+            }
+
+            function showFirstTitle (data) {
+                console.log(data[0].title);
+            }
+
+            loadTodos('https://jsonplaceholder.typicode.com/todos', 'json', showFiveTodos);
+            loadTodos('https://jsonplaceholder.typicode.com/todos', 'json', showFirstTitle);
+        </code>
+    </pre>
+
+    <p>Check the output/answer in the console.</p>
+
+    <script src="fetch.js"></script>
+</body>
+</html>
