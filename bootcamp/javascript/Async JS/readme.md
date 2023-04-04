@@ -100,7 +100,7 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 // expected output: Array [3, 42, "foo"]
 ```
 
-### Fetch API
+## Fetch API
 
 `fetch()` API is basically like a modern, more efficient version of XMLHttpRequest.
 
