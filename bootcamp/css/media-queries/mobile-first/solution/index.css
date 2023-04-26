@@ -1,0 +1,42 @@
+/* 01 - MOBILE FIRST */
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.showcase__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.showcase__paragraph {
+  margin: 0;
+}
+
+.showcase__paragraph:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+
+  .showcase__item {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    grid-column-gap: 5%;
+  }
+
+  .showcase__image {
+    margin-bottom: 0;
+  }
+
+  .showcase__paragraph:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
