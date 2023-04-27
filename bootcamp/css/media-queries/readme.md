@@ -1,6 +1,6 @@
 # Media Queries
 
-**Introduction**
+### Introduction
 A very simple explanation would be that a media query is a special CSS3 at-rule that applies a block of CSS properties only if a certain condition is true. They are used when we want to modify our website or application depending on our user's device general type (screen, print, ...) or specific parameters (viewport width, height, resolution, ...).
 
 In a more broad explanation, we can say that media queries are used for the following actions:
@@ -91,7 +91,7 @@ When using media queries on projects, there are two main strategies that we will
 
 In recent years the mobile-first strategy is main go-to when setting up modern web project, since more than 60% of the audience accesses websites via mobile devices. Nevertheless, it is important to be aware of both strategies and where each one of them makes sense.
 
-**Mobile-first**
+### Mobile-first
 
 Mobile-first design is the process of planning and developing a website keeping in mind the mobile-users first - we can see it as a response to the classic desktop-first approach that is proving to be less effective when taking into account the growing audience that is primarily accessing websites via mobile devices.
 
@@ -167,7 +167,7 @@ Let's say that we want to slightly change the styling on desktop devices - we ca
 
 By adding just a few CSS rules we have changed the layout of the whole footer element for desktop devices, while keeping all the previous styling. In the next section we'll explore how we would achieve the same layout with the desktop-first strategy.
 
-**Desktop-first**
+### Desktop-first
 
 When using the desktop-first approach, we are constructing our CSS in a way that's primarily targeted towards large (desktop) devices. This approach is also known as graceful degradation and it incorporates all complexities right from the start and removes them later for smaller devices. The problem with this strategy is that if we build the all-inclusive design right from the start, the core and supplementary elements merge and become harder to distinguish and separate. Also, as we will see in out example, it results in more lines of code.
 
