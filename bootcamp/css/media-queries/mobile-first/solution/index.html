@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!--Use the following markup for the exercises:-->
+    <section class="showcase">
+
+        <div class="container">
+
+            <article class="showcase__item">
+
+                <img src="https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Walrus" class="showcase__image">
+
+                <div class="showcase__content">
+
+                    <p class="showcase__paragraph">
+                    The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies:[2] the Atlantic walrus (O. r. rosmarus), which lives in the Atlantic Ocean, and the Pacific walrus (O. r. divergens), which lives in the Pacific Ocean.
+                    </p>
+
+                    <p class="showcase__paragraph">
+                    Adult walrus are characterised by prominent tusks and whiskers, and their considerable bulk: adult males in the Pacific can weigh more than 2,000 kilograms (4,400 pounds)[3] and, among pinnipeds, are exceeded in size only by the two species of elephant seals.[4] Walruses live mostly in shallow waters above the continental shelves, spending significant amounts of their lives on the sea ice looking for benthic bivalve mollusks to eat. Walruses are relatively long-lived, social animals, and they are considered to be a "keystone species" in the Arctic marine regions.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <div>
+                <p><b>Note:</b>Check a solution in the css file.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--
+        Implement the following features:
+
+        .container - should have a width of 85% on mobile devices and 70% on desktop devices and always be in the center of the screen.
+        .showcase__item - all content in this element should be displayed in a single column on mobile devices. On desktop devices the image and text should be placed next to each other where the image takes 40% of the element and the text content 55%. There should be a gap of 5% between the two columns.
+        .showcase__image - should always take 100% width of its parent element on both screens. The height should be calculated automatically. Only on mobile, the showcase image should have a bottom margin of 1.5rem;
+        .showcase-paragraph - should have a top margin of 0 on both screens. On mobile, every paragraph except the last one should have a bottom margin of 0.75rem. On desktop, paragraph except the last one should have a bottom margin of 1.5rem.
+        Note: Use 992 pixels (you can also convert this into rem) as the desktop breakpoint.
+
+        01 - Mobile-first
+        Implement the requirements listed above using the mobile-first approach.
+
+        02 - Desktop-first
+        Implement the requirements listed above using the desktop-first approach.
+    -->
+</body>
+
+</html>
